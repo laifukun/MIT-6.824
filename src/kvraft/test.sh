@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export GOPATH="/home/fukun/Desktop/Courses/DistributionSystem/MIT6.284/MIT-6.824/src/"
+export PATH="$PATH:/usr/lib/go-1.9/bin"
+
+rm res -rf
+mkdir res
+for ((i = 0; i < 200; i++))
+do
+echo $i
+(go test -race -run TestSnapshotUnreliableRecoverConcurrentPartitionLinearizable3B) > ./res/$i
+grep -nr "FAIL.*" res
+done

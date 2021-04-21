@@ -50,6 +50,9 @@ func (log *Log) getLogTerm(id int) int {
 	if id <= log.lastSnapshotIndex {
 		return log.lastSnapshotTerm
 	}
+	if id > log.getLastIndex() {
+		return log.getLastLogTerm()
+	}
 	//fmt.Printf("ID : %d", id)
 	return log.entries[log.logIndexToPos(id)].Term
 }
@@ -58,7 +61,6 @@ func (log *Log) replicateEntries(entry []Entry) {
 	if entry == nil {
 		return
 	}
-
 	log.entries = append(log.entries, entry...)
 }
 
@@ -120,9 +122,9 @@ func (log *Log) takeEntriesUntilIndex(id int) []Entry {
 	return nil
 }
 
-func (log *Log) discardEntriesBefore(index int) {
+func (log *Log) discardEntriesBefore(index int, term int) {
 	//discard entries before index id - including index id
-	if index >= log.getLastIndex() {
+	if index >= log.getLastIndex() || log.getLogTerm(index) != term {
 		log.entries = nil
 		return
 	}
@@ -138,7 +140,7 @@ func (log *Log) discardEntriesBefore(index int) {
 
 func (log *Log) snapshot(lastSnapshotIndex int, lastSnapshotTerm int) {
 	
-	log.discardEntriesBefore(lastSnapshotIndex)
+	log.discardEntriesBefore(lastSnapshotIndex, lastSnapshotTerm)
 	log.setSnapshotParameter(lastSnapshotIndex, lastSnapshotTerm)
 }
 

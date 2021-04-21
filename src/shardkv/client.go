@@ -8,11 +8,14 @@ package shardkv
 // talks to the group that holds the key's shard.
 //
 
-import "../labrpc"
-import "crypto/rand"
-import "math/big"
-import "../shardmaster"
-import "time"
+import (
+	"sync/atomic"
+	"../labrpc"
+	"crypto/rand"
+	"math/big"
+	"../shardmaster"
+	"time"
+)
 
 //
 // which shard is a key in?
@@ -40,6 +43,10 @@ type Clerk struct {
 	config   shardmaster.Config
 	make_end func(string) *labrpc.ClientEnd
 	// You will have to modify this struct.
+
+	leaderId   int
+	clientId   int64
+	sequenceId int64
 }
 
 //
@@ -56,6 +63,10 @@ func MakeClerk(masters []*labrpc.ClientEnd, make_end func(string) *labrpc.Client
 	ck.sm = shardmaster.MakeClerk(masters)
 	ck.make_end = make_end
 	// You'll have to add code here.
+
+	ck.leaderId = 0
+	ck.clientId = nrand()
+	ck.sequenceId = 0
 	return ck
 }
 
@@ -66,12 +77,17 @@ func MakeClerk(masters []*labrpc.ClientEnd, make_end func(string) *labrpc.Client
 // You will have to modify this function.
 //
 func (ck *Clerk) Get(key string) string {
-	args := GetArgs{}
-	args.Key = key
+	//args := GetArgs{}
+	//args.Key = key
+
+	seqId := atomic.AddInt64(&ck.sequenceId, 1)
+	args := GetArgs{Key: key, ClientId: ck.clientId, SequenceId: seqId}
 
 	for {
 		shard := key2shard(key)
 		gid := ck.config.Shards[shard]
+		args.GID = gid
+		args.Shard = shard
 		if servers, ok := ck.config.Groups[gid]; ok {
 			// try each server for the shard.
 			for si := 0; si < len(servers); si++ {
@@ -92,7 +108,7 @@ func (ck *Clerk) Get(key string) string {
 		ck.config = ck.sm.Query(-1)
 	}
 
-	return ""
+	//return ""
 }
 
 //
@@ -100,20 +116,25 @@ func (ck *Clerk) Get(key string) string {
 // You will have to modify this function.
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
-	args := PutAppendArgs{}
-	args.Key = key
-	args.Value = value
-	args.Op = op
-
+	//args := PutAppendArgs{}
+	//args.Key = key
+	//args.Value = value
+	//args.Op = op
+	seqId := atomic.AddInt64(&ck.sequenceId, 1)
+	//ck.sequenceId++
+	args := PutAppendArgs{Key: key, Value: value, Op: op, ClientId: ck.clientId, SequenceId: seqId}
 
 	for {
 		shard := key2shard(key)
 		gid := ck.config.Shards[shard]
+		args.GID = gid
+		args.Shard = shard
 		if servers, ok := ck.config.Groups[gid]; ok {
 			for si := 0; si < len(servers); si++ {
 				srv := ck.make_end(servers[si])
 				var reply PutAppendReply
 				ok := srv.Call("ShardKV.PutAppend", &args, &reply)
+				DPrintf(   "Put append Return Key: %s, Value: %s, Reply: %v",key, value, reply)
 				if ok && reply.Err == OK {
 					return
 				}

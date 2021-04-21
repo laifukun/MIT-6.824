@@ -1,17 +1,21 @@
 package raft
 
 import (
+	//"strconv"
+	//"math/rand"
 	"log"
 	"time"
-	"os"
+	//"os"
 )
 
 // Debugging
 const Debug = 0
-var f, err = os.Create("../logfile")
+//var Filename string = strconv.Itoa(rand.Int())
+
+//var f, err = os.Create("./res/"+Filename)
 func DPrintf(format string, a ...interface{}) (n int, err error) {
 	if Debug > 0 {
-		log.SetOutput(f)
+		//log.SetOutput(f)
 		log.Printf(format, a...)
 	}
 	return
@@ -53,8 +57,6 @@ type AppendEntryReply struct {
 	XTerm     int //Term of the conflit
 	XIndex    int // First Index of the conflit term
 	Success   bool
-	LastLogId int
-	CommitId int
 }
 
 type SnapshotArgs struct {
@@ -88,7 +90,6 @@ type ApplyMsg struct {
 	LastIncludedIndex int
 	LastIncludedTerm  int
 	Snapshot []byte
-	//IsSnapshot bool
 }
 
 const (

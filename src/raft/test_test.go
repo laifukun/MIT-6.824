@@ -751,7 +751,7 @@ func TestFigure82C(t *testing.T) {
 				nup += 1
 			}
 		}
-		DPrintf("%v", cfg.logs)
+		//DPrintf("%v", cfg.logs)
 	}
 
 	for i := 0; i < servers; i++ {

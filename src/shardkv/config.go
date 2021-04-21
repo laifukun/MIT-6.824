@@ -1,21 +1,25 @@
 package shardkv
 
-import "../shardmaster"
-import "../labrpc"
-import "testing"
-import "os"
+import (
+	"os"
+	"testing"
 
-// import "log"
-import crand "crypto/rand"
-import "math/big"
-import "math/rand"
-import "encoding/base64"
-import "sync"
-import "runtime"
-import "../raft"
-import "strconv"
-import "fmt"
-import "time"
+	"../labrpc"
+	"../shardmaster"
+
+	// import "log"
+	crand "crypto/rand"
+	"encoding/base64"
+	"fmt"
+	"math/big"
+	"math/rand"
+	"runtime"
+	"strconv"
+	"sync"
+	"time"
+
+	"../raft"
+)
 
 func randstring(n int) string {
 	b := make([]byte, 2*n)
@@ -346,6 +350,9 @@ func make_config(t *testing.T, n int, unreliable bool, maxraftstate int) *config
 	cfg.net = labrpc.MakeNetwork()
 	cfg.start = time.Now()
 
+	//var fileame string = strconv.Itoa(rand.Int())
+	//var f, _ = os.Create("./res/" + fileame)
+	//log.SetOutput(f)
 	// master
 	cfg.nmasters = 3
 	cfg.masterservers = make([]*shardmaster.ShardMaster, cfg.nmasters)

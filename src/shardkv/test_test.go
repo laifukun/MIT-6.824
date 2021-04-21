@@ -1,15 +1,18 @@
 package shardkv
 
-import "../porcupine"
-import "../models"
-import "testing"
-import "strconv"
-import "time"
-import "fmt"
-import "sync/atomic"
-import "sync"
-import "math/rand"
-import "io/ioutil"
+import (
+	"log"
+	"../porcupine"
+	"../models"
+	"testing"
+	"strconv"
+	"time"
+	"fmt"
+	"sync/atomic"
+	"sync"
+	"math/rand"
+	"io/ioutil"
+)
 
 const linearizabilityCheckTimeout = 1 * time.Second
 
@@ -34,7 +37,7 @@ func TestStaticShards(t *testing.T) {
 	cfg.join(0)
 	cfg.join(1)
 
-	n := 10
+	n := 30
 	ka := make([]string, n)
 	va := make([]string, n)
 	for i := 0; i < n; i++ {
@@ -74,7 +77,7 @@ func TestStaticShards(t *testing.T) {
 		}
 	}
 
-	if ndone != 5 {
+	if ndone != n/2 {
 		t.Fatalf("expected 5 completions with one shard dead; got %v\n", ndone)
 	}
 
@@ -97,7 +100,7 @@ func TestJoinLeave(t *testing.T) {
 
 	cfg.join(0)
 
-	n := 10
+	n := 30
 	ka := make([]string, n)
 	va := make([]string, n)
 	for i := 0; i < n; i++ {
@@ -121,16 +124,21 @@ func TestJoinLeave(t *testing.T) {
 	cfg.leave(0)
 
 	for i := 0; i < n; i++ {
+		log.Printf("Append....%d", i)
 		check(t, ck, ka[i], va[i])
 		x := randstring(5)
 		ck.Append(ka[i], x)
 		va[i] += x
 	}
 
+	log.Printf("Sleep 0")
 	// allow time for shards to transfer.
 	time.Sleep(1 * time.Second)
 
+	log.Printf("Check logs")
 	cfg.checklogs()
+
+	log.Printf("ShutDownGroup 0")
 	cfg.ShutdownGroup(0)
 
 	for i := 0; i < n; i++ {
@@ -363,7 +371,7 @@ func TestConcurrent1(t *testing.T) {
 	for i := 0; i < n; i++ {
 		<-ch
 	}
-
+	fmt.Printf("  ... Check..\n")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}

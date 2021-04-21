@@ -1,0 +1,990 @@
+2021/04/20 18:02:02 Shard Master Server 0 start....
+2021/04/20 18:02:02 Shard Master Server 1 start....
+2021/04/20 18:02:02 Shard Master Server 2 start....
+2021/04/20 18:02:02 Group 101, Server server-100-0, args: {0 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-1, args: {0 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-2, args: {0 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-0, args: {2 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-1, args: {2 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-2, args: {2 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-0, args: {3 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-1, args: {3 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-2, args: {3 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-0, args: {1 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-1, args: {1 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-2, args: {1 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-0, args: {4 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-1, args: {4 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Group 101, Server server-100-2, args: {4 101 100 {3 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:02 Shard KV Group 100 server 0 start....
+2021/04/20 18:02:02 Shard KV Group 100 server 1 start....
+2021/04/20 18:02:02 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:02     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:02     Shards: {map[]}
+2021/04/20 18:02:03 Shard KV Group 100 server 2 start....
+2021/04/20 18:02:03 Server 2, Query request from client 3248815538185356502
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 Shard KV Group 101 server 0 start....
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 Shard KV Group 101 server 1 start....
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 Shard KV Group 101 server 2 start....
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 Shard KV Group 102 server 0 start....
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:03 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:03     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:03     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Shard KV Group 102 server 1 start....
+2021/04/20 18:02:04 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Shard KV Group 102 server 2 start....
+2021/04/20 18:02:04 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 102, Server 0, Config Num: 0, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Join request from Client 3263348760954599218, Servers map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]
+2021/04/20 18:02:04 In Shards Update Group 102, Server 0, Config Num: 0, 
+2021/04/20 18:02:04 Group 102, Server 0, New Config: {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Group 102, Server 0, op in thread: {1 5311475777130665480 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:04 Group 102, Server 0, last Applied Index: 0
+2021/04/20 18:02:04 Group 102, Server 0, op: &{1 5311475777130665480 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:04 shardData {map[]}
+2021/04/20 18:02:04 In Shards Update Group 101, Server 0, Config Num: 0, 
+2021/04/20 18:02:04 Group 101, Server 0, New Config: {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Group 101, Server 0, op in thread: {1 -8056627822049514801 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:04 Group 101, Server 0, last Applied Index: 0
+2021/04/20 18:02:04 Group 101, Server 0, op: &{1 -8056627822049514801 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:04 shardData {map[]}
+2021/04/20 18:02:04 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Group 102, Server 1, op in thread: {1 5311475777130665480 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:04 Group 102, Server 1, last Applied Index: 0
+2021/04/20 18:02:04 Group 102, Server 1, op: &{1 5311475777130665480 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:04 shardData {map[]}
+2021/04/20 18:02:04 Group 102, Server 2, applyMsg snapshot id: 1
+2021/04/20 18:02:04 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 Group 101, Server 1, op in thread: {1 -8056627822049514801 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:04 Group 101, Server 1, last Applied Index: 0
+2021/04/20 18:02:04 Group 101, Server 1, op: &{1 -8056627822049514801 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:04 shardData {map[]}
+2021/04/20 18:02:04 Group 101, Server 2, op in thread: {1 -8056627822049514801 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:04 Group 101, Server 2, last Applied Index: 0
+2021/04/20 18:02:04 Group 101, Server 2, op: &{1 -8056627822049514801 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:04 shardData {map[]}
+2021/04/20 18:02:04 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:04 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:04     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:04     Shards: {map[]}
+2021/04/20 18:02:05 Group 100, Server 0, New Config: {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]}, 
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 0, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 Group 100, Server 0, op in thread: {1 88741907247067710 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:05 Group 100, Server 0, last Applied Index: 0
+2021/04/20 18:02:05 Group 100, Server 0, op: &{1 88741907247067710 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:05 shardData {map[]}
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 Group 100, Server 1, op in thread: {1 88741907247067710 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:05 Group 100, Server 1, last Applied Index: 0
+2021/04/20 18:02:05 Group 100, Server 1, op: &{1 88741907247067710 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:05 shardData {map[]}
+2021/04/20 18:02:05 Group 100, Server 2, op in thread: {1 88741907247067710 Config_Update   0 0 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 1
+2021/04/20 18:02:05 Group 100, Server 2, last Applied Index: 0
+2021/04/20 18:02:05 Group 100, Server 2, op: &{1 88741907247067710 Config_Update   1 1 0 0 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:05 shardData {map[]}
+2021/04/20 18:02:05 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:05 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:05 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:05 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:05     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:05     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 Put append Return Key: 0, Value: 100, Reply: {}
+2021/04/20 18:02:06 Put append Return Key: 0, Value: 100, Reply: {ErrWrongLeader}
+2021/04/20 18:02:06 Put append Return Key: 0, Value: 100, Reply: {ErrWrongLeader}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 PutAppend request to Group 102, Server 0
+2021/04/20 18:02:06      args: &{0 100 Put 1922296822976211801 1 102 8}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 Group 102, Server 0, op in thread: {1 1922296822976211801 Put 0 100 0 0 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:06 Group 102, Server 0, last Applied Index: 1
+2021/04/20 18:02:06 Group 102, Server 0, op: &{1 1922296822976211801 Put 0 100 2 1 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[8:map[0:100]]}
+2021/04/20 18:02:06      PutAppend request from Client 1922296822976211801, op: {1 1922296822976211801 Put 0 100 2 1 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {1 1922296822976211801 Put 0 100 2 1 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:06 Put append Return Key: 0, Value: 100, Reply: {OK}
+2021/04/20 18:02:06 PutAppend request to Group 102, Server 0
+2021/04/20 18:02:06      args: &{1 100 Put 1922296822976211801 2 102 9}
+2021/04/20 18:02:06 Group 102, Server 2, op in thread: {1 1922296822976211801 Put 0 100 0 0 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:06 Group 102, Server 2, last Applied Index: 1
+2021/04/20 18:02:06 Group 102, Server 2, op: &{1 1922296822976211801 Put 0 100 2 1 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[8:map[0:100]]}
+2021/04/20 18:02:06 Group 102, Server 0, op in thread: {2 1922296822976211801 Put 1 100 0 0 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:06 Group 102, Server 0, last Applied Index: 2
+2021/04/20 18:02:06 Group 102, Server 0, op: &{2 1922296822976211801 Put 1 100 3 1 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06      PutAppend request from Client 1922296822976211801, op: {2 1922296822976211801 Put 1 100 3 1 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {2 1922296822976211801 Put 1 100 3 1 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:06 Put append Return Key: 1, Value: 100, Reply: {OK}
+2021/04/20 18:02:06 Group 102, Server 1, op in thread: {1 1922296822976211801 Put 0 100 0 0 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:06 Group 102, Server 1, last Applied Index: 1
+2021/04/20 18:02:06 Group 102, Server 1, op: &{1 1922296822976211801 Put 0 100 2 1 8 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[8:map[0:100]]}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06 Group 102, Server 1, op in thread: {2 1922296822976211801 Put 1 100 0 0 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:06 Group 102, Server 1, last Applied Index: 2
+2021/04/20 18:02:06 Group 102, Server 1, op: &{2 1922296822976211801 Put 1 100 3 1 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06 Group 102, Server 2, op in thread: {2 1922296822976211801 Put 1 100 0 0 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:06 Group 102, Server 2, last Applied Index: 2
+2021/04/20 18:02:06 Group 102, Server 2, op: &{2 1922296822976211801 Put 1 100 3 1 9 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 PutAppend request to Group 100, Server 0
+2021/04/20 18:02:06      args: &{2 100 Put 1922296822976211801 3 100 0}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 Group 100, Server 0, op in thread: {3 1922296822976211801 Put 2 100 0 0 0 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:06 Group 100, Server 0, last Applied Index: 1
+2021/04/20 18:02:06 Group 100, Server 0, op: &{3 1922296822976211801 Put 2 100 2 1 0 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[0:map[2:100]]}
+2021/04/20 18:02:06      PutAppend request from Client 1922296822976211801, op: {3 1922296822976211801 Put 2 100 2 1 0 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {3 1922296822976211801 Put 2 100 2 1 0 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:06 Put append Return Key: 2, Value: 100, Reply: {OK}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06 PutAppend request to Group 100, Server 0
+2021/04/20 18:02:06      args: &{3 100 Put 1922296822976211801 4 100 1}
+2021/04/20 18:02:06 Group 100, Server 2, op in thread: {3 1922296822976211801 Put 2 100 0 0 0 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:06 Group 100, Server 2, last Applied Index: 1
+2021/04/20 18:02:06 Group 100, Server 2, op: &{3 1922296822976211801 Put 2 100 2 1 0 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[0:map[2:100]]}
+2021/04/20 18:02:06 Group 100, Server 0, op in thread: {4 1922296822976211801 Put 3 100 0 0 1 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:06 Group 100, Server 0, last Applied Index: 2
+2021/04/20 18:02:06 Group 100, Server 0, op: &{4 1922296822976211801 Put 3 100 3 1 1 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[0:map[2:100] 1:map[3:100]]}
+2021/04/20 18:02:06      PutAppend request from Client 1922296822976211801, op: {4 1922296822976211801 Put 3 100 3 1 1 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {4 1922296822976211801 Put 3 100 3 1 1 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:06 Group 100, Server 1, applyMsg snapshot id: 2
+2021/04/20 18:02:06 Put append Return Key: 3, Value: 100, Reply: {OK}
+2021/04/20 18:02:06 PutAppend request to Group 100, Server 0
+2021/04/20 18:02:06      args: &{4 100 Put 1922296822976211801 5 100 2}
+2021/04/20 18:02:06 Group 100, Server 2, op in thread: {4 1922296822976211801 Put 3 100 0 0 1 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:06 Group 100, Server 2, last Applied Index: 2
+2021/04/20 18:02:06 Group 100, Server 2, op: &{4 1922296822976211801 Put 3 100 3 1 1 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[0:map[2:100] 1:map[3:100]]}
+2021/04/20 18:02:06 Group 100, Server 0, op in thread: {5 1922296822976211801 Put 4 100 0 0 2 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 4
+2021/04/20 18:02:06 Group 100, Server 0, last Applied Index: 3
+2021/04/20 18:02:06 Group 100, Server 0, op: &{5 1922296822976211801 Put 4 100 4 1 2 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:06 shardData {map[0:map[2:100] 1:map[3:100] 2:map[4:100]]}
+2021/04/20 18:02:06      PutAppend request from Client 1922296822976211801, op: {5 1922296822976211801 Put 4 100 4 1 2 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {5 1922296822976211801 Put 4 100 4 1 2 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:06 Put append Return Key: 4, Value: 100, Reply: {OK}
+2021/04/20 18:02:06 Put append Return Key: 5, Value: 100, Reply: {}
+2021/04/20 18:02:06 Put append Return Key: 5, Value: 100, Reply: {ErrWrongLeader}
+2021/04/20 18:02:06 Put append Return Key: 5, Value: 100, Reply: {ErrWrongLeader}
+2021/04/20 18:02:06 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100]]}
+2021/04/20 18:02:06 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[]}
+2021/04/20 18:02:06 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:06     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:06     Shards: {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:06 Group 100, Server 1, applyMsg snapshot id: 4
+2021/04/20 18:02:07 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[]}
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100]]}
+2021/04/20 18:02:07 PutAppend request to Group 100, Server 0
+2021/04/20 18:02:07      args: &{5 100 Put 1922296822976211801 6 100 3}
+2021/04/20 18:02:07 Group 100, Server 0, op in thread: {6 1922296822976211801 Put 5 100 0 0 3 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 5
+2021/04/20 18:02:07 Group 100, Server 0, last Applied Index: 4
+2021/04/20 18:02:07 Group 100, Server 0, op: &{6 1922296822976211801 Put 5 100 5 1 3 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[0:map[2:100] 1:map[3:100] 2:map[4:100] 3:map[5:100]]}
+2021/04/20 18:02:07      PutAppend request from Client 1922296822976211801, op: {6 1922296822976211801 Put 5 100 5 1 3 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {6 1922296822976211801 Put 5 100 5 1 3 100 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:07 Put append Return Key: 5, Value: 100, Reply: {OK}
+2021/04/20 18:02:07 PutAppend request to Group 102, Server 0
+2021/04/20 18:02:07      args: &{6 100 Put 1922296822976211801 7 102 4}
+2021/04/20 18:02:07 Group 102, Server 0, op in thread: {7 1922296822976211801 Put 6 100 0 0 4 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 4
+2021/04/20 18:02:07 Group 102, Server 0, last Applied Index: 3
+2021/04/20 18:02:07 Group 102, Server 0, op: &{7 1922296822976211801 Put 6 100 4 1 4 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07      PutAppend request from Client 1922296822976211801, op: {7 1922296822976211801 Put 6 100 4 1 4 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {7 1922296822976211801 Put 6 100 4 1 4 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:07 Put append Return Key: 6, Value: 100, Reply: {OK}
+2021/04/20 18:02:07 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:07      args: &{7 100 Put 1922296822976211801 8 101 5}
+2021/04/20 18:02:07 Group 101, Server 0, op in thread: {8 1922296822976211801 Put 7 100 0 0 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:07 Group 101, Server 0, last Applied Index: 1
+2021/04/20 18:02:07 Group 101, Server 0, op: &{8 1922296822976211801 Put 7 100 2 1 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100]]}
+2021/04/20 18:02:07      PutAppend request from Client 1922296822976211801, op: {8 1922296822976211801 Put 7 100 2 1 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {8 1922296822976211801 Put 7 100 2 1 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:07 Put append Return Key: 7, Value: 100, Reply: {OK}
+2021/04/20 18:02:07 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:07      args: &{8 100 Put 1922296822976211801 9 101 6}
+2021/04/20 18:02:07 Group 101, Server 2, op in thread: {8 1922296822976211801 Put 7 100 0 0 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:07 Group 101, Server 2, last Applied Index: 1
+2021/04/20 18:02:07 Group 101, Server 2, op: &{8 1922296822976211801 Put 7 100 2 1 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100]]}
+2021/04/20 18:02:07 Group 101, Server 0, op in thread: {9 1922296822976211801 Put 8 100 0 0 6 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:07 Group 101, Server 0, last Applied Index: 2
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100] 3:map[5:100]]}
+2021/04/20 18:02:07 Group 101, Server 1, op in thread: {8 1922296822976211801 Put 7 100 0 0 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 2
+2021/04/20 18:02:07 Group 101, Server 1, last Applied Index: 1
+2021/04/20 18:02:07 Group 101, Server 1, op: &{8 1922296822976211801 Put 7 100 2 1 5 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100]]}
+2021/04/20 18:02:07 Group 100, Server 2, applyMsg snapshot id: 5
+2021/04/20 18:02:07 Group 100, Server 1, applyMsg snapshot id: 5
+2021/04/20 18:02:07 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[5:map[7:100]]}
+2021/04/20 18:02:07 Group 101, Server 0, op: &{9 1922296822976211801 Put 8 100 3 1 6 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100] 6:map[8:100]]}
+2021/04/20 18:02:07      PutAppend request from Client 1922296822976211801, op: {9 1922296822976211801 Put 8 100 3 1 6 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {9 1922296822976211801 Put 8 100 3 1 6 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:07 Put append Return Key: 8, Value: 100, Reply: {OK}
+2021/04/20 18:02:07 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:07      args: &{9 100 Put 1922296822976211801 10 101 7}
+2021/04/20 18:02:07 Group 102, Server 1, op in thread: {7 1922296822976211801 Put 6 100 0 0 4 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 4
+2021/04/20 18:02:07 Group 102, Server 1, last Applied Index: 3
+2021/04/20 18:02:07 Group 102, Server 1, op: &{7 1922296822976211801 Put 6 100 4 1 4 102 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 Group 102, Server 2, applyMsg snapshot id: 4
+2021/04/20 18:02:07 Group 101, Server 1, applyMsg snapshot id: 3
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100] 3:map[5:100]]}
+2021/04/20 18:02:07 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[5:map[7:100] 6:map[8:100]]}
+2021/04/20 18:02:07 Group 101, Server 2, op in thread: {9 1922296822976211801 Put 8 100 0 0 6 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 3
+2021/04/20 18:02:07 Group 101, Server 2, last Applied Index: 2
+2021/04/20 18:02:07 Group 101, Server 2, op: &{9 1922296822976211801 Put 8 100 3 1 6 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100] 6:map[8:100]]}
+2021/04/20 18:02:07 Group 101, Server 0, op in thread: {10 1922296822976211801 Put 9 100 0 0 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 4
+2021/04/20 18:02:07 Group 101, Server 0, last Applied Index: 3
+2021/04/20 18:02:07 Group 101, Server 0, op: &{10 1922296822976211801 Put 9 100 4 1 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:07      PutAppend request from Client 1922296822976211801, op: {10 1922296822976211801 Put 9 100 4 1 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, applied of: {10 1922296822976211801 Put 9 100 4 1 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] OK}
+2021/04/20 18:02:07 Put append Return Key: 9, Value: 100, Reply: {OK}
+2021/04/20 18:02:07 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100] 3:map[5:100]]}
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:07 Group 101, Server 2, op in thread: {10 1922296822976211801 Put 9 100 0 0 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 4
+2021/04/20 18:02:07 Group 101, Server 2, last Applied Index: 3
+2021/04/20 18:02:07 Group 101, Server 2, op: &{10 1922296822976211801 Put 9 100 4 1 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:07 Group 101, Server 1, op in thread: {10 1922296822976211801 Put 9 100 0 0 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }, index: 4
+2021/04/20 18:02:07 Group 101, Server 1, last Applied Index: 3
+2021/04/20 18:02:07 Group 101, Server 1, op: &{10 1922296822976211801 Put 9 100 4 1 7 101 {1 [100 100 100 100 102 101 101 101 102 102] map[100:[server-100-0 server-100-1 server-100-2] 101:[server-101-0 server-101-1 server-101-2] 102:[server-102-0 server-102-1 server-102-2]]} map[] map[] }
+2021/04/20 18:02:07 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:07 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100] 3:map[5:100]]}
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 100, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[0:map[2:100] 1:map[3:100] 2:map[4:100] 3:map[5:100]]}
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:07 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:07 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:07     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:07     Shards: {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:08 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:08 Leave request from Client 3263348760954599218, Servers [100 102]
+2021/04/20 18:02:08 Group 102, Server 0, New Config: {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}, 
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 1, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[4:map[6:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 102, Server 0, op in thread: {2 5311475777130665480 Config_Update   0 0 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 5
+2021/04/20 18:02:08 Group 102, Server 0, last Applied Index: 4
+2021/04/20 18:02:08 Group 102, Server 0, op: &{2 5311475777130665480 Config_Update   5 1 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[], outward Shards:{map[2-4:map[6:100] 2-8:map[0:100] 2-9:map[1:100]]} 
+2021/04/20 18:02:08     Shards: {map[]}
+2021/04/20 18:02:08 Group 102, Server 1, op in thread: {2 5311475777130665480 Config_Update   0 0 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 5
+2021/04/20 18:02:08 Group 102, Server 1, last Applied Index: 4
+2021/04/20 18:02:08 Group 102, Server 1, op: &{2 5311475777130665480 Config_Update   5 1 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Group 102, Server 2, op in thread: {2 5311475777130665480 Config_Update   0 0 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 5
+2021/04/20 18:02:08 Group 102, Server 2, last Applied Index: 4
+2021/04/20 18:02:08 Group 102, Server 2, op: &{2 5311475777130665480 Config_Update   5 1 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[], outward Shards:{map[2-4:map[6:100] 2-8:map[0:100] 2-9:map[1:100]]} 
+2021/04/20 18:02:08     Shards: {map[]}
+2021/04/20 18:02:08 In Shards Update Group 101, Server 0, Config Num: 1, 
+2021/04/20 18:02:08 Group 101, Server 0, New Config: {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]}, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[0:true 1:true 2:true 3:true 4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 -8056627822049514801 Config_Update   0 0 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 5
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 4
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 -8056627822049514801 Config_Update   5 1 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[], outward Shards:{map[2-4:map[6:100] 2-8:map[0:100] 2-9:map[1:100]]} 
+2021/04/20 18:02:08     Shards: {map[]}
+2021/04/20 18:02:08 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting 4:Waiting 8:Waiting 9:Waiting], Service Shards map[5:true 6:true 7:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:08 Group 101 Server 0 request shards
+2021/04/20 18:02:08 Group 101, Server 1, op in thread: {2 -8056627822049514801 Config_Update   0 0 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 5
+2021/04/20 18:02:08 Group 101, Server 1, last Applied Index: 4
+2021/04/20 18:02:08 Group 101, Server 1, op: &{2 -8056627822049514801 Config_Update   5 1 0 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100]]}
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:08 Group 101 Send to Group 102 for shards 8
+2021/04/20 18:02:08 Group 101 Send to Group 102 for shards 4
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:08 Group 101 Send to Group 102 for shards 9
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 2, applyMsg snapshot id: 5
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 9 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 4 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Group 101, Server server-102-0, args: {9 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: {OK map[1:100] map[1922296822976211801:2]}
+2021/04/20 18:02:08 Group 101, Server server-102-0, try Send to Raft
+2021/04/20 18:02:08 Group 101, Server server-102-0, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: {OK map[6:100] map[1922296822976211801:7]}
+2021/04/20 18:02:08 Group 101, Server server-102-0, try Send to Raft
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 8 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Group 101, Server server-102-0, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: {OK map[0:100] map[1922296822976211801:1]}
+2021/04/20 18:02:08 Group 101, Server server-102-0, try Send to Raft
+2021/04/20 18:02:08 Group 101, Server server-102-0, Send to Raft
+2021/04/20 18:02:08 Group 101, Server server-102-0, Send to Raft
+2021/04/20 18:02:08 Group 101, Server server-102-0, Send to Raft
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 1818861882584370184 Save_Shard   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[1:100] map[1922296822976211801:2] }, index: 6
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 5
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 1818861882584370184 Save_Shard   6 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[1:100] map[1922296822976211801:2] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 1759704918910366987 Save_Shard   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[0:100] map[1922296822976211801:1] }, index: 7
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 6
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 1759704918910366987 Save_Shard   7 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[0:100] map[1922296822976211801:1] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 -4006388812967910105 Save_Shard   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[6:100] map[1922296822976211801:7] }, index: 8
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 7
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 -4006388812967910105 Save_Shard   8 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[6:100] map[1922296822976211801:7] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server server-102-1, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-102-1, args: {9 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-102-1, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[], outward Shards:{map[2-4:map[6:100] 2-8:map[0:100] 2-9:map[1:100]]} 
+2021/04/20 18:02:08     Shards: {map[]}
+2021/04/20 18:02:08 Group 101, Server server-102-2, args: {9 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-102-2, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-102-2, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting 4:Committed 8:Committed 9:Committed], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101 Server 0 request shards
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 8 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Committed Group 101, Server server-102-0, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-0, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 9 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Committed Group 101, Server server-102-0, args: {9 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {OK map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-1, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 102, Server 0, op in thread: {2 -2270661890905491466 DELETE_Shard   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 6
+2021/04/20 18:02:08 Group 102, Server 0, last Applied Index: 5
+2021/04/20 18:02:08 Group 101, Server 1, op in thread: {2 1818861882584370184 Save_Shard   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[1:100] map[1922296822976211801:2] }, index: 6
+2021/04/20 18:02:08 Group 101, Server 1, last Applied Index: 5
+2021/04/20 18:02:08 Group 101, Server 1, op: &{2 1818861882584370184 Save_Shard   6 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[1:100] map[1922296822976211801:2] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 1, op in thread: {2 1759704918910366987 Save_Shard   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[0:100] map[1922296822976211801:1] }, index: 7
+2021/04/20 18:02:08 Group 101, Server 1, last Applied Index: 6
+2021/04/20 18:02:08 Group 101, Server 1, op: &{2 1759704918910366987 Save_Shard   7 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[0:100] map[1922296822976211801:1] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-1, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 1, op in thread: {2 -4006388812967910105 Save_Shard   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[6:100] map[1922296822976211801:7] }, index: 8
+2021/04/20 18:02:08 Group 101, Server 1, last Applied Index: 7
+2021/04/20 18:02:08 Group 101, Server 1, op: &{2 -4006388812967910105 Save_Shard   8 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[6:100] map[1922296822976211801:7] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-2, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-2, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-1, args: {9 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 102, Server 0, op: &{2 -2270661890905491466 DELETE_Shard   6 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[], outward Shards:{map[2-4:map[6:100] 2-9:map[1:100]]} 
+2021/04/20 18:02:08     Shards: {map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 -8862980487493344984 Delete_Status   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 9
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 8
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 -8862980487493344984 Delete_Status   9 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 Group 102, Server 0, op in thread: {2 6776729801861949781 DELETE_Shard   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 7
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 102, Server 0, last Applied Index: 6
+2021/04/20 18:02:08 Group 102, Server 0, op: &{2 6776729801861949781 DELETE_Shard   7 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 2, op in thread: {2 1818861882584370184 Save_Shard   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[1:100] map[1922296822976211801:2] }, index: 6
+2021/04/20 18:02:08 Group 101, Server 2, last Applied Index: 5
+2021/04/20 18:02:08 Group 101, Server 2, op: &{2 1818861882584370184 Save_Shard   6 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[1:100] map[1922296822976211801:2] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 2, op in thread: {2 1759704918910366987 Save_Shard   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[0:100] map[1922296822976211801:1] }, index: 7
+2021/04/20 18:02:08 Group 101, Server 2, last Applied Index: 6
+2021/04/20 18:02:08 Group 101, Server 2, op: &{2 1759704918910366987 Save_Shard   7 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[0:100] map[1922296822976211801:1] }
+2021/04/20 18:02:08 shardData {map[5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 2, op in thread: {2 -4006388812967910105 Save_Shard   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[6:100] map[1922296822976211801:7] }, index: 8
+2021/04/20 18:02:08 Group 101, Server 2, last Applied Index: 7
+2021/04/20 18:02:08 Group 101, Server 2, op: &{2 -4006388812967910105 Save_Shard   8 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[6:100] map[1922296822976211801:7] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-2, args: {9 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting 4:Committed 8:Committed], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101 Server 0 request shards
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 4 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Committed Group 101, Server server-102-0, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {OK map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 102, Server 2, op in thread: {2 -2270661890905491466 DELETE_Shard   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 6
+2021/04/20 18:02:08 Group 102, Server 2, last Applied Index: 5
+2021/04/20 18:02:08 Group 102, Server 2, op: &{2 -2270661890905491466 DELETE_Shard   6 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-1, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 102, Server 2, op in thread: {2 6776729801861949781 DELETE_Shard   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 7
+2021/04/20 18:02:08 Group 102, Server 2, last Applied Index: 6
+2021/04/20 18:02:08 Group 102, Server 2, op: &{2 6776729801861949781 DELETE_Shard   7 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Group 102, Server 1, op in thread: {2 -2270661890905491466 DELETE_Shard   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 6
+2021/04/20 18:02:08 Group 102, Server 1, last Applied Index: 5
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 102, Server 1, op: &{2 -2270661890905491466 DELETE_Shard   6 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Group 102, Server 1, op in thread: {2 6776729801861949781 DELETE_Shard   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 7
+2021/04/20 18:02:08 Group 102, Server 1, last Applied Index: 6
+2021/04/20 18:02:08 Group 102, Server 1, op: &{2 6776729801861949781 DELETE_Shard   7 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-2, args: {4 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 102, Server 0, op in thread: {2 2759048393958629082 DELETE_Shard   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 8
+2021/04/20 18:02:08 Group 102, Server 0, last Applied Index: 7
+2021/04/20 18:02:08 Group 102, Server 0, op: &{2 2759048393958629082 DELETE_Shard   8 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Group 101, Server 2, op in thread: {2 -8862980487493344984 Delete_Status   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 9
+2021/04/20 18:02:08 Group 101, Server 2, last Applied Index: 8
+2021/04/20 18:02:08 Group 101, Server 2, op: &{2 -8862980487493344984 Delete_Status   9 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 2332527297034747101 Delete_Status   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 10
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 9
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 2332527297034747101 Delete_Status   10 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 1, op in thread: {2 -8862980487493344984 Delete_Status   0 0 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 9
+2021/04/20 18:02:08 Group 101, Server 1, last Applied Index: 8
+2021/04/20 18:02:08 Group 101, Server 1, op: &{2 -8862980487493344984 Delete_Status   9 1 9 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 8 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Committed Group 101, Server server-102-0, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {OK map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 1, applyMsg snapshot id: 10
+2021/04/20 18:02:08 Committed Group 101, Server server-102-1, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Committed Group 101, Server server-102-2, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting 8:Committed], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101 Server 0 request shards
+2021/04/20 18:02:08 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:08     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:08     Shards: {map[]}
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:08 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:08 Group 102, Server 1, applyMsg snapshot id: 8
+2021/04/20 18:02:08 Group 102, Server 2, op in thread: {2 2759048393958629082 DELETE_Shard   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 8
+2021/04/20 18:02:08 Group 102, Server 2, last Applied Index: 7
+2021/04/20 18:02:08 Group 102, Server 2, op: &{2 2759048393958629082 DELETE_Shard   8 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 102 Server 0 received request shard 8 from Group 101, Target GID: 102
+2021/04/20 18:02:08      Received ConfigId: 2, current config Id: 2
+2021/04/20 18:02:08 Committed Group 101, Server server-102-0, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {OK map[] map[]}
+2021/04/20 18:02:08 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:08 Group 101, Server 2, op in thread: {2 2332527297034747101 Delete_Status   0 0 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 10
+2021/04/20 18:02:08 Group 101, Server 2, last Applied Index: 9
+2021/04/20 18:02:08 Group 101, Server 2, op: &{2 2332527297034747101 Delete_Status   10 1 4 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 7264181388784795913 Delete_Status   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 11
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 10
+2021/04/20 18:02:08 Group 101, Server 0, op: &{2 7264181388784795913 Delete_Status   11 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:08 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:08 Group 101, Server 0, op in thread: {2 7264181388784795913 Delete_Status   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 12
+2021/04/20 18:02:08 Group 101, Server 0, last Applied Index: 11
+2021/04/20 18:02:09 Committed Group 101, Server server-102-1, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Committed Group 101, Server server-102-2, args: {8 101 102 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 1}, reply: {ErrWrongLeader map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 Group 101, Server 1, op in thread: {2 7264181388784795913 Delete_Status   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 11
+2021/04/20 18:02:09 Group 101, Server 1, last Applied Index: 10
+2021/04/20 18:02:09 Group 101, Server 1, op: &{2 7264181388784795913 Delete_Status   11 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server 1, op in thread: {2 7264181388784795913 Delete_Status   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 12
+2021/04/20 18:02:09 Group 101, Server 1, last Applied Index: 11
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {2 7264181388784795913 Delete_Status   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 11
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 10
+2021/04/20 18:02:09 Group 101, Server 2, op: &{2 7264181388784795913 Delete_Status   11 1 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {2 7264181388784795913 Delete_Status   0 0 8 0 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 12
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 11
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Server 0, Get Request op: {11 1922296822976211801 Get 0  13 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {11 1922296822976211801 Get 0  0 0 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 13
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 11
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 Group 101, Server 0, op: &{11 1922296822976211801 Get 0  13 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Get request from Client 1922296822976211801, Key: 0, Value: 100, GID: 101, Shard: 8, op: {11 1922296822976211801 Get 0 100 13 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:09      args: &{0 100-2 Put 1922296822976211801 12 101 8}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {11 1922296822976211801 Get 0  0 0 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 13
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 11
+2021/04/20 18:02:09 Group 101, Server 2, op: &{11 1922296822976211801 Get 0  13 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {12 1922296822976211801 Put 0 100-2 0 0 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 14
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 13
+2021/04/20 18:02:09 Group 101, Server 0, op: &{12 1922296822976211801 Put 0 100-2 14 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09      PutAppend request from Client 1922296822976211801, op: {12 1922296822976211801 Put 0 100-2 14 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, applied of: {12 1922296822976211801 Put 0 100-2 14 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 Put append Return Key: 0, Value: 100-2, Reply: {OK}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Server 0, Get Request op: {13 1922296822976211801 Get 0  15 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 Group 101, Server 1, applyMsg snapshot id: 14
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {12 1922296822976211801 Put 0 100-2 0 0 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 14
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 13
+2021/04/20 18:02:09 Group 101, Server 2, op: &{12 1922296822976211801 Put 0 100-2 14 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {13 1922296822976211801 Get 0  0 0 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 15
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 14
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[]}
+2021/04/20 18:02:09 Group 101, Server 0, op: &{13 1922296822976211801 Get 0  15 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Get request from Client 1922296822976211801, Key: 0, Value: 100-2, GID: 101, Shard: 8, op: {13 1922296822976211801 Get 0 100-2 15 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 Group 101 Server 0, Get Request op: {14 1922296822976211801 Get 1  16 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {13 1922296822976211801 Get 0  0 0 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 15
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 14
+2021/04/20 18:02:09 Group 101, Server 2, op: &{13 1922296822976211801 Get 0  15 1 8 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {14 1922296822976211801 Get 1  0 0 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 16
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 15
+2021/04/20 18:02:09 Group 101, Server 0, op: &{14 1922296822976211801 Get 1  16 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 Get request from Client 1922296822976211801, Key: 1, Value: 100, GID: 101, Shard: 9, op: {14 1922296822976211801 Get 1 100 16 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 Group 101, Server 1, applyMsg snapshot id: 15
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:09      args: &{1 100-2 Put 1922296822976211801 15 101 9}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {14 1922296822976211801 Get 1  0 0 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 16
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 15
+2021/04/20 18:02:09 Group 101, Server 2, op: &{14 1922296822976211801 Get 1  16 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100]]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {15 1922296822976211801 Put 1 100-2 0 0 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 17
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 16
+2021/04/20 18:02:09 Group 101, Server 0, op: &{15 1922296822976211801 Put 1 100-2 17 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09      PutAppend request from Client 1922296822976211801, op: {15 1922296822976211801 Put 1 100-2 17 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, applied of: {15 1922296822976211801 Put 1 100-2 17 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 Put append Return Key: 1, Value: 100-2, Reply: {OK}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Server 0, Get Request op: {16 1922296822976211801 Get 1  18 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[]}
+2021/04/20 18:02:09 Group 101, Server 1, applyMsg snapshot id: 17
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 2, op in thread: {15 1922296822976211801 Put 1 100-2 0 0 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 17
+2021/04/20 18:02:09 Group 101, Server 2, last Applied Index: 16
+2021/04/20 18:02:09 Group 101, Server 2, op: &{15 1922296822976211801 Put 1 100-2 17 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {16 1922296822976211801 Get 1  0 0 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 18
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 17
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 0, op: &{16 1922296822976211801 Get 1  18 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Get request from Client 1922296822976211801, Key: 1, Value: 100-2, GID: 101, Shard: 9, op: {16 1922296822976211801 Get 1 100-2 18 1 9 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[]}
+2021/04/20 18:02:09 Group 101, Server 1, applyMsg snapshot id: 18
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Server 0, Get Request op: {17 1922296822976211801 Get 6  19 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {17 1922296822976211801 Get 6  0 0 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 19
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 18
+2021/04/20 18:02:09 Group 101, Server 0, op: &{17 1922296822976211801 Get 6  19 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Get request from Client 1922296822976211801, Key: 6, Value: 100, GID: 101, Shard: 4, op: {17 1922296822976211801 Get 6 100 19 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:09      args: &{6 100-2 Put 1922296822976211801 18 101 4}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 2, applyMsg snapshot id: 19
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 1, op in thread: {17 1922296822976211801 Get 6  0 0 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 19
+2021/04/20 18:02:09 Group 101, Server 1, last Applied Index: 18
+2021/04/20 18:02:09 Group 101, Server 1, op: &{17 1922296822976211801 Get 6  19 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {18 1922296822976211801 Put 6 100-2 0 0 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 20
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 19
+2021/04/20 18:02:09 Group 101, Server 0, op: &{18 1922296822976211801 Put 6 100-2 20 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100-2] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09      PutAppend request from Client 1922296822976211801, op: {18 1922296822976211801 Put 6 100-2 20 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, applied of: {18 1922296822976211801 Put 6 100-2 20 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}
+2021/04/20 18:02:09 Put append Return Key: 6, Value: 100-2, Reply: {}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100-2] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09 Put append Return Key: 6, Value: 100-2, Reply: {ErrWrongLeader}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:09     Shards: {map[]}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 Put append Return Key: 6, Value: 100-2, Reply: {ErrWrongLeader}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 2, applyMsg snapshot id: 20
+2021/04/20 18:02:09 Group 101, Server 1, op in thread: {18 1922296822976211801 Put 6 100-2 0 0 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 20
+2021/04/20 18:02:09 Group 101, Server 1, last Applied Index: 19
+2021/04/20 18:02:09 Group 101, Server 1, op: &{18 1922296822976211801 Put 6 100-2 20 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100-2] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {0 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 In Shards Update Group 101, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Inward status: map[0:Waiting 1:Waiting 2:Waiting 3:Waiting], Service Shards map[4:true 5:true 6:true 7:true 8:true 9:true], outward Shards:{map[]} 
+2021/04/20 18:02:09 In Shards Update Group 102, Server 0, Config Num: 2, 
+2021/04/20 18:02:09     Shards: {map[4:map[6:100-2] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09     Inward status: map[], Service Shards map[], outward Shards:{map[]} 
+2021/04/20 18:02:09 Group 101 Server 0 request shards
+2021/04/20 18:02:09     Shards: {map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-1, args: {2 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server server-100-2, args: {3 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 0
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 2
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 3
+2021/04/20 18:02:09 PutAppend request to Group 101, Server 0
+2021/04/20 18:02:09      args: &{6 100-2 Put 1922296822976211801 18 101 4}
+2021/04/20 18:02:09 Group 101 Send to Group 100 for shards 1
+2021/04/20 18:02:09 Put append Return Key: 6, Value: 100-2, Reply: {OK}
+2021/04/20 18:02:09 Group 101 Server 0, Get Request op: {19 1922296822976211801 Get 6  21 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 Group 101, Server server-100-0, args: {1 101 100 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} 0}, reply: { map[] map[]}
+2021/04/20 18:02:09 Group 101, Server 0, op in thread: {19 1922296822976211801 Get 6  0 0 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }, index: 21
+2021/04/20 18:02:09 Group 101, Server 0, last Applied Index: 20
+2021/04/20 18:02:09 Group 101, Server 0, op: &{19 1922296822976211801 Get 6  21 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] }
+2021/04/20 18:02:09 shardData {map[4:map[6:100-2] 5:map[7:100] 6:map[8:100] 7:map[9:100] 8:map[0:100-2] 9:map[1:100-2]]}
+2021/04/20 18:02:09 Get request from Client 1922296822976211801, Key: 6, Value: 100-2, GID: 101, Shard: 4, op: {19 1922296822976211801 Get 6 100-2 21 1 4 101 {2 [101 101 101 101 101 101 101 101 101 101] map[101:[server-101-0 server-101-1 server-101-2]]} map[] map[] OK}

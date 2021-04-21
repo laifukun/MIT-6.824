@@ -9,6 +9,8 @@ package raft
 //
 
 import (
+	//"os"
+	//"strconv"
 	"log"
 	"math/rand"
 	"runtime"
@@ -69,6 +71,9 @@ func make_config(t *testing.T, n int, unreliable bool) *config {
 		rand.Seed(makeSeed())
 	})
 	runtime.GOMAXPROCS(4)
+	//var fileame string = strconv.Itoa(rand.Int())
+	//var f, _ = os.Create("./res/"+fileame)
+	//log.SetOutput(f)
 	cfg := &config{}
 	cfg.t = t
 	cfg.net = labrpc.MakeNetwork()
@@ -449,7 +454,9 @@ func (cfg *config) one(cmd interface{}, expectedServers int, retry bool) int {
 			}
 			cfg.mu.Unlock()
 			if rf != nil {
+				//log.Printf("Start %v", cmd)
 				index1, _, ok := rf.Start(cmd)
+				//log.Printf("returned: %v", ok)
 				if ok {
 					index = index1
 					break
@@ -463,7 +470,7 @@ func (cfg *config) one(cmd interface{}, expectedServers int, retry bool) int {
 			t1 := time.Now()
 			for time.Since(t1).Seconds() < 2 {
 				nd, cmd1 := cfg.nCommitted(index)
-				//DPrintf("Index: %d, Count: %d, cmd %v. ", index, nd, cmd)
+				DPrintf("Index: %d, Count: %d,expectedServers: %d, cmd1 %v. cmd: %v", index, nd, expectedServers, cmd1,cmd)
 				if nd > 0 && nd >= expectedServers {
 					// committed
 					if cmd1 == cmd {
