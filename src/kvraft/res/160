@@ -1,4 +1,0 @@
-Test: unreliable net, restarts, partitions, snapshots, many clients, linearizability checks (3B) ...
-  ... Passed --  29.2  7  7688  579
-PASS
-ok  	_/home/fukun/Desktop/Courses/DistributionSystem/MIT6.284/MIT-6.824/src/kvraft	29.288s

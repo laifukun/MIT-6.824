@@ -9,12 +9,13 @@ package shardkv
 //
 
 import (
-	"sync/atomic"
-	"../labrpc"
 	"crypto/rand"
 	"math/big"
-	"../shardmaster"
+	"sync/atomic"
 	"time"
+
+	"../labrpc"
+	"../shardmaster"
 )
 
 //
@@ -116,10 +117,7 @@ func (ck *Clerk) Get(key string) string {
 // You will have to modify this function.
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
-	//args := PutAppendArgs{}
-	//args.Key = key
-	//args.Value = value
-	//args.Op = op
+
 	seqId := atomic.AddInt64(&ck.sequenceId, 1)
 	//ck.sequenceId++
 	args := PutAppendArgs{Key: key, Value: value, Op: op, ClientId: ck.clientId, SequenceId: seqId}
@@ -134,7 +132,7 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 				srv := ck.make_end(servers[si])
 				var reply PutAppendReply
 				ok := srv.Call("ShardKV.PutAppend", &args, &reply)
-				DPrintf(   "Put append Return Key: %s, Value: %s, Reply: %v",key, value, reply)
+				DPrintf("Put append Return Key: %s, Value: %s, Reply: %v", key, value, reply)
 				if ok && reply.Err == OK {
 					return
 				}
