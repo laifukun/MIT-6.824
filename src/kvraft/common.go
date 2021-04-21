@@ -3,6 +3,7 @@ package kvraft
 const (
 	OK             = "OK"
 	ErrNoKey       = "ErrNoKey"
+	ErrWrongGroup  = "ErrWrongGroup"
 	ErrWrongLeader = "ErrWrongLeader"
 )
 
@@ -35,9 +36,10 @@ type GetReply struct {
 	Err   Err
 	Value string
 }
-
+/*
 type SnapShot struct {
 	LastIndex int
 	LastTerm  int
 	KeyValue  []byte
 }
+*/

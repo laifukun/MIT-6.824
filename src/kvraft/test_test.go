@@ -261,9 +261,9 @@ func GenericTest(t *testing.T, part string, nclients int, unreliable bool, crash
 			cfg.ConnectAll()
 		}
 
-		// log.Printf("wait for clients\n")
+		 log.Printf("wait for clients\n")
 		for i := 0; i < nclients; i++ {
-			// log.Printf("read from clients %d\n", i)
+			 log.Printf("read from clients %d\n", i)
 			j := <-clnts[i]
 			// if j < 10 {
 			// 	log.Printf("Warning: client %d managed to perform only %d put operations in 1 sec?\n", i, j)
@@ -736,6 +736,7 @@ func TestSnapshotUnreliableRecoverConcurrentPartition3B(t *testing.T) {
 }
 
 func TestSnapshotUnreliableRecoverConcurrentPartitionLinearizable3B(t *testing.T) {
+	
 	// Test: unreliable net, restarts, partitions, snapshots, linearizability checks (3B) ...
 	GenericTestLinearizability(t, "3B", 15, 7, true, true, true, 1000)
 }

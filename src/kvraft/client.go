@@ -1,18 +1,19 @@
 package kvraft
 
 import (
+	"sync/atomic"
 	"crypto/rand"
 	"math/big"
-	"sync"
+	//"sync"
 	"time"
 
 	"../labrpc"
 )
 
 type Clerk struct {
-	mu         sync.Mutex
+	//mu         sync.Mutex
 	servers    []*labrpc.ClientEnd
-	leaderId   int
+	leaderId   int32
 	clientId   int64
 	sequenceId int64
 	// You will have to modify this struct.
@@ -49,27 +50,31 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 //
 func (ck *Clerk) Get(key string) string {
 
-	ck.mu.Lock()
-	defer ck.mu.Unlock()
-	ck.sequenceId++
-	args := GetArgs{Key: key, ClientId: ck.clientId, SequenceId: ck.sequenceId}
+	//time1 := time.Now()
+	seqId := atomic.AddInt64(&ck.sequenceId, 1)
+	args := GetArgs{Key: key, ClientId: ck.clientId, SequenceId: seqId}
 
-	//DPrintf("Client %d get value of %s", ck.clientId, key)
+	leader := atomic.LoadInt32(&ck.leaderId)
 	for {
 		//DPrintf("Client %d get to Server %d:", ck.clientId, ck.leaderId)
 		var reply GetReply
-		ok := ck.servers[ck.leaderId].Call("KVServer.Get", &args, &reply)
+		ok := ck.servers[leader].Call("KVServer.Get", &args, &reply)
 		if ok {
+			//DPrintf("Client %d get to Server %d, args: %v, reply: %v", ck.clientId, ck.leaderId, args, reply)
+			//DPrintf("Get Time: %v", time.Since(time1))
+			atomic.StoreInt32(&ck.leaderId, leader)
 			if reply.Err == OK {
 				return reply.Value
 			} else if reply.Err == ErrNoKey {
 				return ""
 			}
 		} 
-		if !ok || reply.Err == ErrWrongLeader {
-			ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
-		}
-		time.Sleep(10 * time.Millisecond)
+		
+		//if !ok || reply.Err == ErrWrongLeader {
+		leader = (leader + 1) % int32(len(ck.servers))
+		//ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
+		//}
+		time.Sleep(100 * time.Millisecond)
 	}
 	// You will have to modify this function.
 }
@@ -85,28 +90,32 @@ func (ck *Clerk) Get(key string) string {
 // arguments. and reply must be passed as a pointer.
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
-	ck.mu.Lock()
-	defer ck.mu.Unlock()
+	//ck.mu.Lock()
+	//defer ck.mu.Unlock()
 	// You will have to modify this function.
-	ck.sequenceId++
-	args := PutAppendArgs{Key: key, Value: value, Op: op, ClientId: ck.clientId, SequenceId: ck.sequenceId}
-	//DPrintf("Client input Put Append, %s, %s", key, value)
-	//DPrintf("Client %s, %s, %s, leaderId: %d", op, args.Key, args.Value, ck.leaderId)
-
+	//time1 := time.Now()
+	seqId := atomic.AddInt64(&ck.sequenceId, 1)
+	args := PutAppendArgs{Key: key, Value: value, Op: op, ClientId: ck.clientId, SequenceId: seqId}
+	leader := atomic.LoadInt32(&ck.leaderId)
 	for {
 		//DPrintf("Client %d put/append to Server %d:", ck.clientId, ck.leaderId)
 		var reply PutAppendReply
-		ok := ck.servers[ck.leaderId].Call("KVServer.PutAppend", &args, &reply)
-		//DPrintf("OK? %v", ok)
+		ok := ck.servers[leader].Call("KVServer.PutAppend", &args, &reply)
+		//DPrintf("Client %d put/append to Server %d, args: %v, reply: %v", ck.clientId, ck.leaderId, args, reply)
 		if ok && reply.Err == OK  {
+			//DPrintf("Put Time: %v", time.Since(time1))
+			atomic.StoreInt32(&ck.leaderId, leader)
 			return
 		}
-		if !ok || (reply.Err == ErrWrongLeader) {
-			ck.leaderId = (ck.leaderId + 1) % len(ck.servers)		
-			//DPrintf("Try next server %d", ck.leaderId)	
-		} 
-		time.Sleep(10 * time.Millisecond)
+
+		//ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
+		//if !ok || (reply.Err == ErrWrongLeader) {
+		leader = (leader + 1) % int32(len(ck.servers))		
+		//} 
+		time.Sleep(100 * time.Millisecond)
 	}
+
+	
 
 }
 

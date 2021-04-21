@@ -1,20 +1,24 @@
 package kvraft
 
-import "../labrpc"
-import "testing"
-import "os"
+import (
+	"strconv"
+	"../labrpc"
+	"testing"
+	"os"
+	"log"
 
 // import "log"
-import crand "crypto/rand"
-import "math/big"
-import "math/rand"
-import "encoding/base64"
-import "sync"
-import "runtime"
-import "../raft"
-import "fmt"
-import "time"
-import "sync/atomic"
+	crand "crypto/rand"
+	"math/big"
+	"math/rand"
+	"encoding/base64"
+	"sync"
+	"runtime"
+	"../raft"
+	"fmt"
+	"time"
+	"sync/atomic"
+)
 
 func randstring(n int) string {
 	b := make([]byte, 2*n)
@@ -364,6 +368,10 @@ func make_config(t *testing.T, n int, unreliable bool, maxraftstate int) *config
 		}
 		rand.Seed(makeSeed())
 	})
+	//raft.Filename = strconv.Itoa(rand.Int())
+	var fileame string = strconv.Itoa(rand.Int())
+	var f, _ = os.Create("./res/"+fileame)
+	log.SetOutput(f)
 	runtime.GOMAXPROCS(4)
 	cfg := &config{}
 	cfg.t = t

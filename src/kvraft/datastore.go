@@ -1,9 +1,6 @@
 package kvraft
 
 import (
-	"bytes"
-
-	"../labgob"
 )
 
 type KVPair struct {
@@ -30,36 +27,29 @@ func (db *Datastore) Get(key string) (string, Err) {
 }
 
 func (db *Datastore) Put(key string, value string) {
-	/*
-		OldValue, ok := db.keyValue[key]
-		if ok {
-			OldValue := value
-			db.keyValue[key] = OldValue
-			return
-		}
-	*/
+	if db.KeyValue == nil {
+		db.Init()
+	}
 	db.KeyValue[key] = value
 
 }
 
 func (db *Datastore) Append(key string, value string) {
-	newValue, ok := db.KeyValue[key]
-	if ok {
-		newValue = newValue + value
-
-		db.KeyValue[key] = newValue
-		return
-	}
-	db.KeyValue[key] = value
+	//_, ok := db.KeyValue[key]
+	//if !ok {
+	//	db.Put(key,value)
+	//	return
+	//} 
+	db.KeyValue[key] += value
 }
 
-func (db *Datastore) remove(key string) {
-	_, ok := db.KeyValue[key]
-	if ok {
-		delete(db.KeyValue, key)
-	}
+func (db *Datastore) remove(key string) string {
+	val, _ := db.KeyValue[key]
+	delete(db.KeyValue, key)
+	return val
 }
 
+/*
 func (db *Datastore) GetSnapshot(lastIndex int, lastTerm int) []byte {
 	w := new(bytes.Buffer)
 	e := labgob.NewEncoder(w)
@@ -87,12 +77,12 @@ func (db *Datastore) PutSnapshot(data []byte) (int, int) {
 	if d.Decode(&lastIndex) != nil || d.Decode(&lastTerm) != nil {
 		DPrintf("Error reading state")
 	}
-	/*
+	
 		else {
 			kv.lastRaftIndex = lastIndex
 			kv.lastRaftTerm = lastTerm
 		}
-	*/
+	
 	var tempkv map[string]string
 	d.Decode(&tempkv)
 	db.KeyValue = tempkv
@@ -100,3 +90,4 @@ func (db *Datastore) PutSnapshot(data []byte) (int, int) {
 	return lastIndex, lastTerm
 
 }
+*/
