@@ -8,6 +8,6 @@ mkdir res
 for ((i = 0; i < 200; i++))
 do
 echo $i
-(go test -race -run TestSnapshotUnreliableRecoverConcurrentPartitionLinearizable3B) > ./res/$i
+(go test -race -run 3B) > ./res/$i
 grep -nr "FAIL.*" res
 done
