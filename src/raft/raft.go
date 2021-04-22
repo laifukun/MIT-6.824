@@ -206,14 +206,12 @@ func (rf *Raft) AppendEntries(args *AppendEntryArgs, reply *AppendEntryReply) {
 
 	//DPrintf("    Server Term: %d, Leader term, %d", rf.currentTerm, args.Term)
 	DPrintf("    Server %d last log ID: %d, last snapshot Id: %d, Received prevLogId: %d", rf.me, rf.getLastLogId(), rf.lastSnapshotIndex, args.PrevLogId)
-	//DPrintf("    Server %d logs: %v", rf.me, rf.logs)
-	//DPrintf("    Comming in Logs: %v", args.Entries)
 
 	reply.Term = rf.currentTerm
 	reply.Success = false
 
-	reply.XTerm = -1  //config term
-	reply.XIndex = -1 //config index
+	reply.XTerm = -1  //conflit term
+	reply.XIndex = -1 //conflit index
 
 	if args.Term < rf.currentTerm {
 		return
@@ -271,15 +269,17 @@ func (rf *Raft) AppendEntries(args *AppendEntryArgs, reply *AppendEntryReply) {
 
 	rf.persist()
 
-	if rf.commitId < args.LeaderCommitId {
-		if args.LeaderCommitId <= rf.getLastLogId() {
-			rf.commitId = args.LeaderCommitId
-		} else {
-			rf.commitId = rf.getLastLogId()
+	rf.advanceCommitIndex(args.LeaderCommitId)
+	/*
+		if rf.commitId < args.LeaderCommitId {
+			if args.LeaderCommitId <= rf.getLastLogId() {
+				rf.commitId = args.LeaderCommitId
+			} else {
+				rf.commitId = rf.getLastLogId()
+			}
+			rf.applyStateMachine()
 		}
-		rf.applyStateMachine()
-	}
-
+	*/
 	DPrintf("    Server %d last log ID: %d, commit ID: %d", rf.me, rf.getLastLogId(), rf.commitId)
 	rf.setElectionTimer()
 	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
@@ -362,7 +362,6 @@ func (rf *Raft) sendRequestVote(server int, args *RequestVoteArgs, reply *Reques
 }
 
 // call request vote
-
 func (rf *Raft) sendToVote() {
 
 	if rf.state != CANDIDATE {
@@ -398,12 +397,13 @@ func (rf *Raft) sendToVote() {
 			}
 			if reply.Term > rf.currentTerm {
 				rf.stepDownToFollower(reply.Term)
-			} else {
-				rf.hasVote[server] = reply.VoteGranted
-				if rf.voteQuorum() {
-					rf.becomeLeader()
-				}
+				return
 			}
+			rf.hasVote[server] = reply.VoteGranted
+			if rf.voteQuorum() {
+				rf.becomeLeader()
+			}
+
 		}(server)
 	}
 }
@@ -439,8 +439,8 @@ func (rf *Raft) sendLogEntries() {
 		}
 
 		go func(server int) {
-			rf.mu.Lock()
 
+			rf.mu.Lock()
 			if rf.state != LEADER {
 				rf.mu.Unlock()
 				return
@@ -458,7 +458,7 @@ func (rf *Raft) sendLogEntries() {
 				PrevLogTerm: rf.logs.getLogTerm(rf.nextId[server] - 1),
 			}
 
-			args.Entries = rf.logs.getEntries(rf.nextId[server], rf.getLastLogId()) //rf.logs[testLogId : lastLogId+1]
+			args.Entries = rf.logs.getEntries(rf.nextId[server], rf.getLastLogId())
 			args.LeaderCommitId = rf.commitId
 			rf.mu.Unlock()
 
@@ -475,39 +475,39 @@ func (rf *Raft) sendLogEntries() {
 
 			if reply.Term > rf.currentTerm {
 				rf.stepDownToFollower(reply.Term)
-			} else {
-				if reply.Success {
-					rf.matchId[server] = args.PrevLogId + len(args.Entries)
-					rf.nextId[server] = rf.matchId[server] + 1
-					rf.advanceCommitIndex()
-
-				} else {
-
-					nextId := reply.XIndex + 1
-					if reply.XTerm != -1 {
-						/*	for id := rf.nextId[server]; id >= rf.lastSnapshotIndex; id-- {
-								if rf.logs.getLogTerm(id) == reply.XTerm {
-									nextId = id+1
-									break
-								}
-							}
-						*/
-						// bineary search to find the first index with XTerm
-						leftId := rf.lastSnapshotIndex
-						rightId := reply.XIndex
-						for leftId <= rightId {
-							midId := leftId + (rightId-leftId)/2
-							if rf.logs.getLogTerm(midId) <= reply.XTerm {
-								leftId = midId + 1
-							} else {
-								rightId = midId - 1
-							}
-						}
-						nextId = leftId
-					}
-					rf.nextId[server] = nextId
-				}
+				return
 			}
+			if reply.Success {
+				rf.matchId[server] = args.PrevLogId + len(args.Entries)
+				rf.nextId[server] = rf.matchId[server] + 1
+				newCommitId := rf.matchQuorum()
+				rf.advanceCommitIndex(newCommitId)
+				return
+			}
+			nextId := reply.XIndex + 1
+			if reply.XTerm != -1 {
+				/*for id := rf.nextId[server]; id >= rf.lastSnapshotIndex; id-- {
+					if rf.logs.getLogTerm(id) == reply.XTerm {
+						nextId = id+1
+						break
+					}
+				}
+				*/
+				// bineary search to find the first index with XTerm
+				leftId := rf.lastSnapshotIndex
+				rightId := reply.XIndex
+				for leftId <= rightId {
+					midId := leftId + (rightId-leftId)/2
+					if rf.logs.getLogTerm(midId) <= reply.XTerm {
+						leftId = midId + 1
+					} else {
+						rightId = midId - 1
+					}
+				}
+				nextId = leftId
+			}
+			rf.nextId[server] = nextId
+
 		}(server)
 	}
 }
@@ -555,25 +555,23 @@ func (rf *Raft) sendSnapshot(server int) {
 	}
 }
 
-func (rf *Raft) setNextHeartBeatTime() {
-	rf.nextHeartbeatTime = time.Now().Add(time.Duration(BroadcastTime) * time.Millisecond)
-}
-
-func (rf *Raft) advanceCommitIndex() {
-
-	if rf.state != LEADER {
-		return
-	}
+func (rf *Raft) matchQuorum() int {
 	matched := make([]int, len(rf.peers))
 	copy(matched, rf.matchId)
 	sort.Ints(matched)
-	newCommitId := matched[(len(rf.peers)-1)/2]
+	return matched[(len(rf.peers)-1)/2]
+}
+
+func (rf *Raft) advanceCommitIndex(newCommitId int) {
 
 	if rf.logs.getLogTerm(newCommitId) != rf.currentTerm {
 		return
 	}
 	if rf.commitId >= newCommitId {
 		return
+	}
+	if newCommitId > rf.getLastLogId() {
+		newCommitId = rf.getLastLogId()
 	}
 	rf.commitId = newCommitId
 	rf.applyStateMachine()
@@ -631,27 +629,39 @@ func (rf *Raft) setElectionTimer() {
 	rf.startElectionAt = time.Now().Add(time.Duration(ElectionTimeout+n) * time.Millisecond)
 }
 
-func (rf *Raft) timerThread() {
+func (rf *Raft) setNextHeartBeatTime() {
+	rf.nextHeartbeatTime = time.Now().Add(time.Duration(BroadcastTime) * time.Millisecond)
+}
 
-	stateChanged := rf.stateSignal.Subscribe()
-	DPrintf("Timer thread started: %v", rf.me)
-	for !rf.killed() {
+func (rf *Raft) stepDownToFollower(Term int) {
 
-		rf.mu.Lock()
-		waitUntil := rf.startElectionAt
-		rf.mu.Unlock()
-		select {
-		case <-stateChanged:
-			rf.mu.Lock()
-			waitUntil = rf.startElectionAt
-			rf.mu.Unlock()
-		case currentTime := <-time.After(time.Until(waitUntil)):
-			rf.mu.Lock()
-			DPrintf("Time Out, server %d start new election at: %v, currentTime: %v", rf.me, rf.startElectionAt, currentTime)
-			rf.startNewElection()
-			rf.mu.Unlock()
-		}
+	if Term > rf.currentTerm {
+		rf.votedFor = -1
+		rf.requestVoteDone = false
+		rf.currentTerm = Term
 	}
+	if rf.state != FOLLOWER {
+		DPrintf("Server %d become Follower at Term %d", rf.me, rf.currentTerm)
+		rf.state = FOLLOWER
+	}
+	rf.setElectionTimer()
+	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
+	rf.persist()
+}
+
+func (rf *Raft) becomeLeader() {
+
+	rf.state = LEADER
+
+	for i := 0; i < len(rf.nextId); i++ {
+		rf.nextId[i] = rf.getLastLogId() + 1
+	}
+	rf.matchId[rf.me] = rf.getLastLogId()
+	rf.sendLogEntries()
+	rf.setNextHeartBeatTime()
+	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
+	rf.persist()
+	DPrintf("Server %d becomes new leader at Term %d. Commited Id: %d, Last Log Id: %d, last applied Id: %d ", rf.me, rf.currentTerm, rf.commitId, rf.getLastLogId(), rf.lastApplied)
 }
 
 /* raft state to captch state change. The main state include: election time, heart beat time, server state change. Whenever a state changes,
@@ -801,38 +811,6 @@ func (rf *Raft) logSaveThread() {
 }
 */
 
-func (rf *Raft) stepDownToFollower(Term int) {
-
-	if Term > rf.currentTerm {
-		rf.votedFor = -1
-		rf.requestVoteDone = false
-		rf.currentTerm = Term
-	}
-	if rf.state != FOLLOWER {
-		DPrintf("Server %d become Follower at Term %d", rf.me, rf.currentTerm)
-		rf.state = FOLLOWER
-	}
-	rf.setElectionTimer()
-	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
-	rf.persist()
-}
-
-func (rf *Raft) becomeLeader() {
-
-	rf.state = LEADER
-
-	for i := 0; i < len(rf.nextId); i++ {
-		rf.nextId[i] = rf.getLastLogId() + 1
-	}
-	rf.matchId[rf.me] = rf.getLastLogId()
-	//rf.startElectionAt = MaxTimePoint
-	rf.sendLogEntries()
-	rf.setNextHeartBeatTime()
-	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
-	rf.persist()
-	DPrintf("Server %d becomes new leader at Term %d. Commited Id: %d, Last Log Id: %d, last applied Id: %d ", rf.me, rf.currentTerm, rf.commitId, rf.getLastLogId(), rf.lastApplied)
-}
-
 //
 // the service using Raft (e.g. a k/v server) wants to start
 // agreement on the next command to be appended to Raft's log. if this
@@ -893,6 +871,7 @@ func (rf *Raft) Snapshot(snapshot []byte, lastIndex int, lastTerm int) {
 The KV server is blocked, which means applyCh can't accept message. But CondInstallSnapshot need to acquire a lock, if send log entries
 requires to get ApplyCh, then, the system is blocked.
 */
+/*
 func (rf *Raft) CondInstallSnapshot(lastIncludedIndex int, lastIncludedTerm int, snapshot []byte) bool {
 
 	rf.mu.Lock()
@@ -915,7 +894,7 @@ func (rf *Raft) CondInstallSnapshot(lastIncludedIndex int, lastIncludedTerm int,
 	return true
 
 }
-
+*/
 func (rf *Raft) saveStateAndSnapshot(snapshot []byte, lastIndex int, lastTerm int) {
 
 	rf.logs.snapshot(lastIndex, lastTerm)
@@ -988,7 +967,6 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	DPrintf("%d Start Raft...", rf.me)
 
 	go rf.raftStateThread2()
-	//go rf.timerThread()
 	//go rf.stateMachineThread()
 	//go rf.logSaveThread()
 
