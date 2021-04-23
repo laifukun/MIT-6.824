@@ -56,7 +56,7 @@ type KVServer struct {
 
 	kvData           Datastore
 	lastAppliedIndex int
-	lastAppliedTerm  int
+	//lastAppliedTerm  int
 
 	opChannel     map[int]chan Op
 	requestRecord Datastore
@@ -166,7 +166,7 @@ func (kv *KVServer) isDuplicateRequest(clientId int64, seqId int64) bool {
 	return false
 }
 
-func (kv *KVServer) getChannel(Id int) chan Op {
+func (kv *KVServer) getOpChannel(Id int) chan Op {
 
 	ch, ok := kv.opChannel[Id]
 	if !ok {
@@ -176,7 +176,7 @@ func (kv *KVServer) getChannel(Id int) chan Op {
 	return ch
 }
 
-func (kv *KVServer) removeChannel(Id int) {
+func (kv *KVServer) removeOpChannel(Id int) {
 	delete(kv.opChannel, Id)
 }
 
@@ -184,7 +184,7 @@ func (kv *KVServer) removeChannel(Id int) {
 func (kv *KVServer) getAppliedOperation(index int) Op {
 
 	kv.mu.Lock()
-	ch := kv.getChannel(index)
+	ch := kv.getOpChannel(index)
 	kv.mu.Unlock()
 	op := Op{}
 	select {
@@ -195,7 +195,7 @@ func (kv *KVServer) getAppliedOperation(index int) Op {
 	}
 
 	kv.mu.Lock()
-	kv.removeChannel(index)
+	kv.removeOpChannel(index)
 	kv.mu.Unlock()
 
 	return op
@@ -212,7 +212,7 @@ func (kv *KVServer) handleStateMessage(applyMsg raft.ApplyMsg) {
 		if !kv.isDuplicateRequest(op.ClientId, op.OpId) {
 			kv.updateServiceState(&op)
 		}
-		kv.sendStateSignal(op)
+		kv.sendOpSignal(op)
 	}
 }
 
@@ -224,10 +224,7 @@ func (kv *KVServer) updateServiceSnapshot(applyMsg raft.ApplyMsg) {
 		return
 	}
 	kv.installSnapshot(applyMsg.Snapshot)
-
 	kv.lastAppliedIndex = applyMsg.LastIncludedIndex
-	kv.lastAppliedTerm = applyMsg.LastIncludedTerm
-
 }
 
 // update service state from raft
@@ -242,11 +239,11 @@ func (kv *KVServer) updateServiceState(op *Op) {
 
 	kv.requestRecord.Put(strconv.FormatInt(op.ClientId, 10), strconv.FormatInt(op.OpId, 10))
 	kv.lastAppliedIndex = op.Index
-	kv.lastAppliedTerm = op.Term
+	//kv.lastAppliedTerm = op.Term
 }
 
 // send state signal to Get/Put/Append request
-func (kv *KVServer) sendStateSignal(op Op) {
+func (kv *KVServer) sendOpSignal(op Op) {
 
 	ch, ok := kv.opChannel[op.Index]
 	if ok {
@@ -255,7 +252,6 @@ func (kv *KVServer) sendStateSignal(op Op) {
 		}
 		ch <- op
 	}
-
 }
 
 // monitor and receive concensus agreement state
@@ -267,18 +263,17 @@ func (kv *KVServer) serverStateThread() {
 		case applyMsg := <-kv.applyCh:
 			kv.mu.Lock()
 			if !applyMsg.CommandValid {
-
 				kv.updateServiceSnapshot(applyMsg)
 			} else {
 				kv.handleStateMessage(applyMsg)
-				kv.snapshot()
+				kv.takeSnapshot(applyMsg.CommandIndex, applyMsg.CommandTerm)
 			}
 			kv.mu.Unlock()
 		}
 	}
 }
 
-func (kv *KVServer) snapshot() {
+func (kv *KVServer) takeSnapshot(lastAppliedIndex int, lastAppliedTerm int) {
 
 	if kv.maxraftstate == -1 || kv.persister.RaftStateSize() < kv.maxraftstate {
 		return
@@ -288,38 +283,12 @@ func (kv *KVServer) snapshot() {
 	e := labgob.NewEncoder(w)
 	e.Encode(kv.requestRecord)
 	e.Encode(kv.kvData)
-	e.Encode(kv.lastAppliedIndex)
-	e.Encode(kv.lastAppliedTerm)
+	e.Encode(lastAppliedIndex)
 	snapshot := w.Bytes()
 
-	go kv.rf.Snapshot(snapshot, kv.lastAppliedIndex, kv.lastAppliedTerm)
+	go kv.rf.Snapshot(snapshot, lastAppliedIndex, lastAppliedTerm)
 
 }
-
-/*
-// monitor state and send snapshot request
-func (kv *KVServer) snapshotThread() {
-
-	for !kv.killed() {
-		kv.mu.Lock()
-		if kv.maxraftstate != -1 && kv.persister.RaftStateSize() >= kv.maxraftstate {
-
-			w := new(bytes.Buffer)
-			e := labgob.NewEncoder(w)
-			e.Encode(kv.requestRecord)
-			e.Encode(kv.kvData)
-			e.Encode(kv.lastAppliedIndex)
-			e.Encode(kv.lastAppliedTerm)
-
-			snapshot := w.Bytes()
-			go kv.rf.Snapshot(snapshot, kv.lastAppliedIndex, kv.lastAppliedTerm)
-		}
-		kv.mu.Unlock()
-		time.Sleep(100 * time.Millisecond)
-	}
-
-}
-*/
 
 // install snapshot to server
 func (kv *KVServer) installSnapshot(data []byte) {
@@ -337,7 +306,6 @@ func (kv *KVServer) installSnapshot(data []byte) {
 	d.Decode(&lastAppliedId)
 	d.Decode(&lastAppliedTm)
 	kv.lastAppliedIndex = lastAppliedId
-	kv.lastAppliedTerm = lastAppliedTm
 	kv.requestRecord = reqMap
 	kv.kvData = kvDat
 }

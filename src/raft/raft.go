@@ -268,18 +268,7 @@ func (rf *Raft) AppendEntries(args *AppendEntryArgs, reply *AppendEntryReply) {
 	}
 
 	rf.persist()
-
 	rf.advanceCommitIndex(args.LeaderCommitId)
-	/*
-		if rf.commitId < args.LeaderCommitId {
-			if args.LeaderCommitId <= rf.getLastLogId() {
-				rf.commitId = args.LeaderCommitId
-			} else {
-				rf.commitId = rf.getLastLogId()
-			}
-			rf.applyStateMachine()
-		}
-	*/
 	DPrintf("    Server %d last log ID: %d, commit ID: %d", rf.me, rf.getLastLogId(), rf.commitId)
 	rf.setElectionTimer()
 	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
@@ -422,14 +411,7 @@ func (rf *Raft) voteQuorum() bool {
 	return false
 }
 
-// send heart beat as a leader
-
-func (rf *Raft) sendAppendEntry(server int, args *AppendEntryArgs, reply *AppendEntryReply) bool {
-	ok := rf.peers[server].Call("Raft.AppendEntries", args, reply)
-	return ok
-}
-
-func (rf *Raft) sendLogEntries() {
+func (rf *Raft) leaderOperation() {
 
 	DPrintf("Leader %d Send Logs to Servers, next ID: %v, match Id: %v, Last Snapshot Index: %d", rf.me, rf.nextId, rf.matchId, rf.lastSnapshotIndex)
 
@@ -437,79 +419,86 @@ func (rf *Raft) sendLogEntries() {
 		if server == rf.me {
 			continue
 		}
-
-		go func(server int) {
-
-			rf.mu.Lock()
-			if rf.state != LEADER {
-				rf.mu.Unlock()
-				return
-			}
-			if rf.nextId[server] <= rf.lastSnapshotIndex {
-				rf.mu.Unlock()
-				rf.sendSnapshot(server)
-				return
-			}
-
-			args := AppendEntryArgs{
-				Term:        rf.currentTerm,
-				LeaderId:    rf.me,
-				PrevLogId:   rf.nextId[server] - 1,
-				PrevLogTerm: rf.logs.getLogTerm(rf.nextId[server] - 1),
-			}
-
-			args.Entries = rf.logs.getEntries(rf.nextId[server], rf.getLastLogId())
-			args.LeaderCommitId = rf.commitId
-			rf.mu.Unlock()
-
-			var reply AppendEntryReply
-			ok := rf.sendAppendEntry(server, &args, &reply)
-
-			//DPrintf("Server %d appendEntry reply, args: %v, reply: %v", server, args, reply)
-			rf.mu.Lock()
-			defer rf.mu.Unlock()
-
-			if !ok || rf.state != LEADER || rf.currentTerm != args.Term {
-				return
-			}
-
-			if reply.Term > rf.currentTerm {
-				rf.stepDownToFollower(reply.Term)
-				return
-			}
-			if reply.Success {
-				rf.matchId[server] = args.PrevLogId + len(args.Entries)
-				rf.nextId[server] = rf.matchId[server] + 1
-				newCommitId := rf.matchQuorum()
-				rf.advanceCommitIndex(newCommitId)
-				return
-			}
-			nextId := reply.XIndex + 1
-			if reply.XTerm != -1 {
-				/*for id := rf.nextId[server]; id >= rf.lastSnapshotIndex; id-- {
-					if rf.logs.getLogTerm(id) == reply.XTerm {
-						nextId = id+1
-						break
-					}
-				}
-				*/
-				// bineary search to find the first index with XTerm
-				leftId := rf.lastSnapshotIndex
-				rightId := reply.XIndex
-				for leftId <= rightId {
-					midId := leftId + (rightId-leftId)/2
-					if rf.logs.getLogTerm(midId) <= reply.XTerm {
-						leftId = midId + 1
-					} else {
-						rightId = midId - 1
-					}
-				}
-				nextId = leftId
-			}
-			rf.nextId[server] = nextId
-
-		}(server)
+		if rf.nextId[server] <= rf.lastSnapshotIndex {
+			go rf.sendSnapshot(server)
+		} else {
+			go rf.sendLogEntries(server)
+		}
 	}
+	rf.setNextHeartBeatTime()
+}
+
+// send heart beat as a leader
+
+func (rf *Raft) sendAppendEntry(server int, args *AppendEntryArgs, reply *AppendEntryReply) bool {
+	ok := rf.peers[server].Call("Raft.AppendEntries", args, reply)
+	return ok
+}
+
+func (rf *Raft) sendLogEntries(server int) {
+
+	rf.mu.Lock()
+	if rf.state != LEADER {
+		rf.mu.Unlock()
+		return
+	}
+	args := AppendEntryArgs{
+		Term:        rf.currentTerm,
+		LeaderId:    rf.me,
+		PrevLogId:   rf.nextId[server] - 1,
+		PrevLogTerm: rf.logs.getLogTerm(rf.nextId[server] - 1),
+	}
+
+	args.Entries = rf.logs.getEntries(rf.nextId[server], rf.getLastLogId())
+	args.LeaderCommitId = rf.commitId
+	rf.mu.Unlock()
+
+	var reply AppendEntryReply
+	ok := rf.sendAppendEntry(server, &args, &reply)
+
+	//DPrintf("Server %d appendEntry reply, args: %v, reply: %v", server, args, reply)
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
+
+	if !ok || rf.state != LEADER || rf.currentTerm != args.Term {
+		return
+	}
+
+	if reply.Term > rf.currentTerm {
+		rf.stepDownToFollower(reply.Term)
+		return
+	}
+	if reply.Success {
+		rf.matchId[server] = args.PrevLogId + len(args.Entries)
+		rf.nextId[server] = rf.matchId[server] + 1
+		newCommitId := rf.matchQuorum()
+		rf.advanceCommitIndex(newCommitId)
+		return
+	}
+	nextId := reply.XIndex + 1
+	if reply.XTerm != -1 {
+		/*for id := rf.nextId[server]; id >= rf.lastSnapshotIndex; id-- {
+			if rf.logs.getLogTerm(id) == reply.XTerm {
+				nextId = id+1
+				break
+			}
+		}
+		*/
+		// bineary search to find the first index with XTerm
+		leftId := rf.lastSnapshotIndex
+		rightId := reply.XIndex
+		for leftId <= rightId {
+			midId := leftId + (rightId-leftId)/2
+			if rf.logs.getLogTerm(midId) <= reply.XTerm {
+				leftId = midId + 1
+			} else {
+				rightId = midId - 1
+			}
+		}
+		nextId = leftId
+	}
+	rf.nextId[server] = nextId
+
 }
 
 func (rf *Raft) sendInstallSnapshot(server int, args *SnapshotArgs, reply *SnapshotReply) bool {
@@ -520,6 +509,10 @@ func (rf *Raft) sendInstallSnapshot(server int, args *SnapshotArgs, reply *Snaps
 func (rf *Raft) sendSnapshot(server int) {
 
 	rf.mu.Lock()
+	if rf.state != LEADER {
+		rf.mu.Unlock()
+		return
+	}
 	var snapshot = make([]byte, len(rf.persister.ReadSnapshot()))
 	copy(snapshot, rf.persister.ReadSnapshot())
 	args := SnapshotArgs{
@@ -657,8 +650,7 @@ func (rf *Raft) becomeLeader() {
 		rf.nextId[i] = rf.getLastLogId() + 1
 	}
 	rf.matchId[rf.me] = rf.getLastLogId()
-	rf.sendLogEntries()
-	rf.setNextHeartBeatTime()
+	rf.leaderOperation()
 	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
 	rf.persist()
 	DPrintf("Server %d becomes new leader at Term %d. Commited Id: %d, Last Log Id: %d, last applied Id: %d ", rf.me, rf.currentTerm, rf.commitId, rf.getLastLogId(), rf.lastApplied)
@@ -703,8 +695,7 @@ func (rf *Raft) raftStateThread2() {
 				rf.startNewElection()
 				waitUntil = rf.startElectionAt
 			case LEADER:
-				rf.sendLogEntries()
-				rf.setNextHeartBeatTime()
+				rf.leaderOperation()
 				waitUntil = rf.nextHeartbeatTime
 			}
 			rf.mu.Unlock()
@@ -843,8 +834,7 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 
 	rf.matchId[rf.me] = rf.getLastLogId()
 
-	rf.sendLogEntries()
-	rf.setNextHeartBeatTime()
+	rf.leaderOperation()
 	rf.persist()
 	go rf.stateSignal.NotifyAll(atomic.LoadInt32(&rf.dead))
 	DPrintf("Start Agreement Leader %d: current Term %d, lastlog ID: %d, commitId: %d, cmd: %v", rf.me, rf.currentTerm, rf.getLastLogId(), rf.commitId, command)
