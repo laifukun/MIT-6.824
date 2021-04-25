@@ -1,12 +1,12 @@
 package shardmaster
 
 import (
+	"fmt"
 	"sync"
 	"testing"
 )
 
 // import "time"
-import "fmt"
 
 func check(t *testing.T, groups []int, ck *Clerk) {
 	c := ck.Query(-1)
@@ -39,7 +39,7 @@ func check(t *testing.T, groups []int, ck *Clerk) {
 	}
 	min := 257
 	max := 0
-	for g, _ := range c.Groups {
+	for g := range c.Groups {
 		if counts[g] > max {
 			max = counts[g]
 		}

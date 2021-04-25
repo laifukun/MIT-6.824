@@ -1,5 +1,7 @@
 package shardmaster
 
+import "hash/crc64"
+
 //
 // Master shard server: assigns shards to replication groups.
 //
@@ -35,8 +37,8 @@ const (
 type Err string
 
 type JoinArgs struct {
-	Servers map[int][]string // new GID -> servers mappings
-	ClientId int64
+	Servers    map[int][]string // new GID -> servers mappings
+	ClientId   int64
 	SequenceId int64
 }
 
@@ -48,7 +50,7 @@ type JoinReply struct {
 type LeaveArgs struct {
 	GIDs []int
 
-	ClientId int64
+	ClientId   int64
 	SequenceId int64
 }
 
@@ -61,7 +63,7 @@ type MoveArgs struct {
 	Shard int
 	GID   int
 
-	ClientId int64
+	ClientId   int64
 	SequenceId int64
 }
 
@@ -73,7 +75,7 @@ type MoveReply struct {
 type QueryArgs struct {
 	Num int // desired config number
 
-	ClientId int64
+	ClientId   int64
 	SequenceId int64
 }
 
@@ -81,4 +83,14 @@ type QueryReply struct {
 	WrongLeader bool
 	Err         Err
 	Config      Config
+}
+
+func hash32(s string) uint64 {
+	crc64Table := crc64.MakeTable(0xC96C5795D7870F42)
+	aStringToHash := []byte(s)
+	return crc64.Checksum(aStringToHash, crc64Table)
+
+	//h := fnv.New32a()
+	//h.Write([]byte(s))
+	//return int32(h.Sum32())
 }

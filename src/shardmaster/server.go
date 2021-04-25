@@ -3,6 +3,8 @@ package shardmaster
 import (
 	//"sort"
 	"log"
+	"sort"
+	"strconv"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -25,6 +27,8 @@ type ShardMaster struct {
 	requestRecord map[int64]int64
 
 	configs []Config // indexed by config num
+
+	serverRing map[int]int
 }
 
 const (
@@ -272,16 +276,69 @@ func (sm *ShardMaster) createNextConfig(currentConfig Config) Config {
 }
 
 // assign shards to servers
+// consistent Hash
+func (sm *ShardMaster) rebalanceShards2(nextCfg *Config, opType string, gid int) {
+	if len(nextCfg.Groups) < 1 {
+		return
+	}
+	weight := 3 * 3
 
-func (sm *ShardMaster) assignShards(nextCfg *Config, opType string, gid int) {
+	switch opType {
+	case JOIN:
+		for i := 0; i < weight; i++ {
+			angle := int(360 * float32(hash32(strconv.Itoa(gid)+"-"+strconv.Itoa(i))) / 18446744073709551615)
+			sm.serverRing[angle] = gid
+		}
+	case LEAVE:
+		for i := 0; i < weight; i++ {
+			angle := int(360 * float32(hash32(strconv.Itoa(gid)+"-"+strconv.Itoa(i))) / 18446744073709551615)
+			delete(sm.serverRing, angle)
+		}
+	}
+
+	log.Printf("next Cfg: %v, serverRing: %v", nextCfg, sm.serverRing)
+	angleArr := make([]int, 0)
+
+	for angle := range sm.serverRing {
+		angleArr = append(angleArr, angle)
+	}
+	sort.Ints(angleArr)
+
+	curShard := 0
+	for id, angle := range angleArr {
+		if angle <= curShard*360/len(nextCfg.Shards) {
+			continue
+		} else {
+			if id == 0 {
+				nextCfg.Shards[curShard] = sm.serverRing[angleArr[len(angleArr)-1]]
+			} else {
+				nextCfg.Shards[curShard] = sm.serverRing[angleArr[id-1]]
+			}
+			curShard++
+		}
+	}
+
+	for curShard < len(nextCfg.Shards) {
+		nextCfg.Shards[curShard] = sm.serverRing[angleArr[len(angleArr)-1]]
+		curShard++
+	}
+
+	log.Printf("next Cfg: %v, shards: %v", nextCfg, nextCfg.Shards)
+
+}
+
+// brutal force rebalance shards
+func (sm *ShardMaster) rebalanceShards(nextCfg *Config, opType string, gid int) {
 
 	if len(nextCfg.Groups) < 1 {
 		return
 	}
+
+	// extract shards for each gid in the new config
 	gidShardsMap := make(map[int][]int)
 
-	for gid, _ := range nextCfg.Groups {
-		gidShardsMap[gid] = []int{}
+	for xgid := range nextCfg.Groups {
+		gidShardsMap[xgid] = []int{}
 	}
 	for i := 0; i < len(nextCfg.Shards); i++ {
 		val, _ := gidShardsMap[nextCfg.Shards[i]]
@@ -289,24 +346,30 @@ func (sm *ShardMaster) assignShards(nextCfg *Config, opType string, gid int) {
 		gidShardsMap[nextCfg.Shards[i]] = val
 	}
 
+	// average shards per gid
 	avg := len(nextCfg.Shards) / len(nextCfg.Groups)
 
 	switch opType {
 	case JOIN:
 		jShards := []int{}
+		// new gid has at least average number of shards
 		for i := 0; i < avg; i++ {
-			max := 0
+
+			maxShard := 0
 			maxGid := 0
+			// find the gid with max number of shards
 			for xgid, shards := range gidShardsMap {
-				if len(shards) > max {
-					max = len(shards)
+				if len(shards) > maxShard {
+					maxShard = len(shards)
 					maxGid = xgid
 				}
 			}
+			// remove one shard from that Gid, and put it to the new Gid
 			mShards := gidShardsMap[maxGid]
 			jShards = append(jShards, mShards[len(mShards)-1])
 			mShards = mShards[0 : len(mShards)-1]
 			gidShardsMap[maxGid] = mShards
+			// continue until the new Gid has at least average number of shards
 		}
 
 		gidShardsMap[gid] = jShards
@@ -317,18 +380,22 @@ func (sm *ShardMaster) assignShards(nextCfg *Config, opType string, gid int) {
 		for _, shard := range leaveShards {
 			min := len(nextCfg.Shards) + 1
 			minGid := 0
+			// find the gid with min number of shards
 			for xgid, xshards := range gidShardsMap {
 				if len(xshards) < min {
 					min = len(xshards)
 					minGid = xgid
 				}
 			}
+			// move one shard from leaving Shards to the Gid with min number of shards
 			mShards := gidShardsMap[minGid]
 			mShards = append(mShards, shard)
 			gidShardsMap[minGid] = mShards
+			// continue until all the shards in leaving group are assigned
 		}
 	}
 
+	// assign gid to each shard
 	for gid, shardList := range gidShardsMap {
 		for _, shard := range shardList {
 			nextCfg.Shards[shard] = gid
@@ -362,7 +429,7 @@ func (sm *ShardMaster) Raft() *raft.Raft {
 func (kv *ShardMaster) getAppliedOperation(index int) Op {
 
 	kv.mu.Lock()
-	ch := kv.getChannel(index)
+	ch := kv.getOpChannel(index)
 	kv.mu.Unlock()
 	op := Op{}
 	select {
@@ -374,7 +441,7 @@ func (kv *ShardMaster) getAppliedOperation(index int) Op {
 
 	}
 	kv.mu.Lock()
-	kv.removeChannel(index)
+	kv.removeOpChannel(index)
 	kv.mu.Unlock()
 
 	return op
@@ -406,7 +473,7 @@ func (sm *ShardMaster) handleStateMessage(applyMsg raft.ApplyMsg) {
 		if !sm.isDuplicateRequest(op.ClientId, op.OpId) {
 			sm.updateSeviceState(op)
 		}
-		sm.sendStateSignal(op)
+		sm.sendOpSignal(op)
 	}
 }
 
@@ -429,14 +496,14 @@ func (sm *ShardMaster) updateSeviceState(op Op) {
 			newServers := make([]string, len(servers))
 			copy(newServers, servers)
 			nextConfig.Groups[gid] = newServers
-			sm.assignShards(&nextConfig, op.OpType, gid)
+			sm.rebalanceShards(&nextConfig, op.OpType, gid)
 		}
 
 	case LEAVE:
 
 		for _, gid := range op.LeaveGIDs {
 			delete(nextConfig.Groups, gid)
-			sm.assignShards(&nextConfig, op.OpType, gid)
+			sm.rebalanceShards(&nextConfig, op.OpType, gid)
 		}
 
 	case MOVE:
@@ -448,11 +515,9 @@ func (sm *ShardMaster) updateSeviceState(op Op) {
 	}
 
 	sm.configs = append(sm.configs, nextConfig)
-
-	//log.Printf("Server %d configs: %v", sm.me, sm.configs[len(sm.configs)-1])
 }
 
-func (sm *ShardMaster) sendStateSignal(op Op) {
+func (sm *ShardMaster) sendOpSignal(op Op) {
 
 	ch, ok := sm.opChannel[op.Index]
 
@@ -462,7 +527,7 @@ func (sm *ShardMaster) sendStateSignal(op Op) {
 
 }
 
-func (sm *ShardMaster) getChannel(Id int) chan Op {
+func (sm *ShardMaster) getOpChannel(Id int) chan Op {
 
 	ch, ok := sm.opChannel[Id]
 	if !ok {
@@ -472,7 +537,7 @@ func (sm *ShardMaster) getChannel(Id int) chan Op {
 	return ch
 
 }
-func (sm *ShardMaster) removeChannel(Id int) {
+func (sm *ShardMaster) removeOpChannel(Id int) {
 
 	delete(sm.opChannel, Id)
 
@@ -493,6 +558,7 @@ func StartServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persister)
 
 	sm.opChannel = make(map[int]chan Op)
 	sm.requestRecord = make(map[int64]int64)
+	sm.serverRing = make(map[int]int)
 
 	labgob.Register(Op{})
 	sm.applyCh = make(chan raft.ApplyMsg, 1)
