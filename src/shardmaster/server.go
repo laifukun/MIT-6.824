@@ -2,7 +2,7 @@ package shardmaster
 
 import (
 	//"sort"
-	"log"
+
 	"sort"
 	"strconv"
 	"sync"
@@ -90,7 +90,7 @@ func (sm *ShardMaster) Join(args *JoinArgs, reply *JoinReply) {
 		reply.WrongLeader = true
 	}
 
-	log.Printf("Join request from Client %d, Servers %v", args.ClientId, args.Servers)
+	//log.Printf("Join request from Client %d, Servers %v", args.ClientId, args.Servers)
 	//log.Printf("Server states: %v", nextConfig.Groups)
 
 }
@@ -132,7 +132,7 @@ func (sm *ShardMaster) Leave(args *LeaveArgs, reply *LeaveReply) {
 	} else {
 		reply.WrongLeader = true
 	}
-	log.Printf("Leave request from Client %d, Servers %v", args.ClientId, args.GIDs)
+	//log.Printf("Leave request from Client %d, Servers %v", args.ClientId, args.GIDs)
 	//log.Printf("Server states: %v", nextConfig.Groups)
 }
 
@@ -173,7 +173,7 @@ func (sm *ShardMaster) Move(args *MoveArgs, reply *MoveReply) {
 		reply.WrongLeader = true
 	}
 
-	log.Printf("Move request from Client %d, Shard %d, Group %d", args.ClientId, args.Shard, args.GID)
+	//log.Printf("Move request from Client %d, Shard %d, Group %d", args.ClientId, args.Shard, args.GID)
 }
 
 func equalOperation(op1 Op, op2 Op) bool {
@@ -236,7 +236,7 @@ func (sm *ShardMaster) Query(args *QueryArgs, reply *QueryReply) {
 	}
 	reply.WrongLeader = true
 
-	log.Printf("Server %d, Query request from client %d", sm.me, args.ClientId)
+	//log.Printf("Server %d, Query request from client %d", sm.me, args.ClientId)
 }
 
 //assert leadership of current server
@@ -296,7 +296,7 @@ func (sm *ShardMaster) rebalanceShards2(nextCfg *Config, opType string, gid int)
 		}
 	}
 
-	log.Printf("next Cfg: %v, serverRing: %v", nextCfg, sm.serverRing)
+	//log.Printf("next Cfg: %v, serverRing: %v", nextCfg, sm.serverRing)
 	angleArr := make([]int, 0)
 
 	for angle := range sm.serverRing {
@@ -323,7 +323,7 @@ func (sm *ShardMaster) rebalanceShards2(nextCfg *Config, opType string, gid int)
 		curShard++
 	}
 
-	log.Printf("next Cfg: %v, shards: %v", nextCfg, nextCfg.Shards)
+	//log.Printf("next Cfg: %v, shards: %v", nextCfg, nextCfg.Shards)
 
 }
 
@@ -564,7 +564,7 @@ func StartServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persister)
 	sm.applyCh = make(chan raft.ApplyMsg, 1)
 	sm.rf = raft.Make(servers, me, persister, sm.applyCh)
 
-	log.Printf("Shard Master Server %d start....", sm.me)
+	//log.Printf("Shard Master Server %d start....", sm.me)
 
 	go sm.serverStateThread()
 	// Your code here.

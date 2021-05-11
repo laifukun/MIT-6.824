@@ -14,7 +14,7 @@ import (
 	"../shardmaster"
 )
 
-const Debug = 1
+const Debug = 0
 
 //var f, err = os.Create("../logfile")
 
@@ -64,13 +64,6 @@ type Op struct {
 	// otherwise RPC will break.
 }
 
-/*
-type OpSeq struct {
-	Id int64
-	//Value string
-	Error Err
-}
-*/
 type ShardKV struct {
 	mu           sync.Mutex
 	me           int
@@ -663,25 +656,6 @@ func (kv *ShardKV) snapshot() {
 	go kv.rf.Snapshot(snapshot, kv.lastAppliedIndex, kv.lastAppliedTerm)
 }
 
-/*
-// monitor state and send snapshot request
-func (kv *ShardKV) snapshotThread() {
-
-	for !kv.killed() {
-		kv.mu.Lock()
-		if kv.maxraftstate != -1 && kv.persister.RaftStateSize() >= kv.maxraftstate {
-
-			snapshot := kv.encodeState()
-			//DPrintf("Group %d, server %d, Length of snapshot: %d, length of raft: %d", kv.gid, kv.me, len(snapshot), kv.persister.RaftStateSize())
-			go kv.rf.Snapshot(snapshot, kv.lastAppliedIndex, kv.lastAppliedTerm)
-		}
-		kv.mu.Unlock()
-		time.Sleep(100 * time.Millisecond)
-	}
-
-}
-*/
-
 func (kv *ShardKV) encodeState() []byte {
 
 	w := new(bytes.Buffer)
@@ -852,7 +826,7 @@ func StartServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persister,
 	// Use something like this to talk to the shardmaster:
 	// kv.mck = shardmaster.MakeClerk(kv.masters)
 
-	log.Printf("Shard KV Group %d server %d start....", kv.gid, kv.me)
+	//log.Printf("Shard KV Group %d server %d start....", kv.gid, kv.me)
 
 	return kv
 }

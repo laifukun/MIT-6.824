@@ -1,17 +1,17 @@
 package shardkv
 
 import (
-	"log"
-	"../porcupine"
-	"../models"
-	"testing"
-	"strconv"
-	"time"
 	"fmt"
-	"sync/atomic"
-	"sync"
-	"math/rand"
 	"io/ioutil"
+	"math/rand"
+	"strconv"
+	"sync"
+	"sync/atomic"
+	"testing"
+	"time"
+
+	"../models"
+	"../porcupine"
 )
 
 const linearizabilityCheckTimeout = 1 * time.Second
@@ -124,21 +124,21 @@ func TestJoinLeave(t *testing.T) {
 	cfg.leave(0)
 
 	for i := 0; i < n; i++ {
-		log.Printf("Append....%d", i)
+		//log.Printf("Append....%d", i)
 		check(t, ck, ka[i], va[i])
 		x := randstring(5)
 		ck.Append(ka[i], x)
 		va[i] += x
 	}
 
-	log.Printf("Sleep 0")
+	//log.Printf("Sleep 0")
 	// allow time for shards to transfer.
 	time.Sleep(1 * time.Second)
 
-	log.Printf("Check logs")
+	//log.Printf("Check logs")
 	cfg.checklogs()
 
-	log.Printf("ShutDownGroup 0")
+	//log.Printf("ShutDownGroup 0")
 	cfg.ShutdownGroup(0)
 
 	for i := 0; i < n; i++ {
@@ -371,7 +371,7 @@ func TestConcurrent1(t *testing.T) {
 	for i := 0; i < n; i++ {
 		<-ch
 	}
-	fmt.Printf("  ... Check..\n")
+	//fmt.Printf("  ... Check..\n")
 	for i := 0; i < n; i++ {
 		check(t, ck, ka[i], va[i])
 	}
